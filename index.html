@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALFA SMP - Serwer</title>
+    <title>ALFA SMP</title>
     <link href="https://fonts.googleapis.com/css2?family=VT323&family=Cinzel:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     
     <style>
@@ -151,6 +151,53 @@
             background: #000;
         }
 
+        /* Styl nowego okienka z informacjami technologicznymi */
+        .info-box {
+            background: rgba(15, 20, 25, 0.85);
+            border: 2px solid var(--border-color);
+            border-radius: 4px;
+            margin-top: 25px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+        }
+
+        .info-box-title {
+            font-family: 'Cinzel', serif;
+            color: var(--text-gold);
+            font-size: 1.2rem;
+            margin-top: 0;
+            margin-bottom: 15px;
+            border-bottom: 1px dashed rgba(74, 59, 44, 0.5);
+            padding-bottom: 5px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .info-item {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px 15px;
+            border-left: 3px solid var(--mc-light-green);
+            border-radius: 2px;
+        }
+
+        .info-label {
+            font-size: 0.8rem;
+            color: #8899a6;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 2px;
+        }
+
+        .info-value {
+            font-family: 'VT323', monospace;
+            font-size: 1.4rem;
+            color: #fff;
+        }
+
         /* Styl Rang */
         .ranks-grid {
             display: grid;
@@ -229,8 +276,27 @@
             <h2>Interaktywna Mapa 3D BlueMap</h2>
             <p>Oglądaj wygenerowany świat serwera na żywo w pełnym trójwymiarze.</p>
             <div class="map-container">
-                <iframe src="https://cors-anywhere.azm.workers.dev/http://TUTAJ_WPISZ_IP_SERWERA:25685" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="ADRES_Z_PORTEM_25685" allowfullscreen="" loading="lazy"></iframe>
             </div>
+
+            <div class="info-box">
+                <div class="info-box-title">Informacje o Serwerze</div>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-label">Wersja gry</div>
+                        <div class="info-value">1.21.1</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Silnik serwera</div>
+                        <div class="info-value">Fabric Loader 0.19.3</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Paczka modów</div>
+                        <div class="info-value" style="color: #5865F2;">Na Discord</div>
+                    </div>
+                </div>
+            </div>
+
             <p style="margin-top: 15px; font-size: 0.85rem; text-align: right; font-style: italic;">Strona główna przygotowana przez: <span class="signature">Blajcu 2026</span></p>
         </section>
 
