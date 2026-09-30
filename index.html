@@ -1,66 +1,3298 @@
-<section class="section" id="dojazd">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SZYBKIE MYCIE | Mobilny Auto Detailing</title>
+
+    <meta name="description"
+          content="Szybkie Mycie – mobilny auto detailing w Gorzowie Wielkopolskim i okolicach. Dojazd do klienta do 100 km.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+<style>
+
+/* =========================================================
+   SZYBKIE MYCIE
+   ORIGINAL MECHANICAL / SCI-FI DESIGN
+========================================================= */
+
+:root {
+    --bg: #06080a;
+    --bg2: #0b0f12;
+    --panel: #10161b;
+    --panel2: #151c21;
+
+    --red: #ff2600;
+    --red-dark: #941800;
+    --orange: #ff8a00;
+    --yellow: #ffc400;
+
+    --green: #32ff70;
+
+    --white: #f4f6f7;
+    --gray: #a0aaaf;
+    --dark-gray: #586268;
+
+    --tech: 'Orbitron', sans-serif;
+    --body: 'Rajdhani', sans-serif;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background:
+        radial-gradient(
+            circle at 15% 10%,
+            rgba(255,38,0,.08),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 90% 45%,
+            rgba(255,138,0,.05),
+            transparent 30%
+        ),
+        var(--bg);
+
+    color: var(--white);
+
+    font-family: var(--body);
+
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 45px 45px;
+
+    pointer-events: none;
+
+    z-index: -5;
+}
+
+body::after {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            transparent 0px,
+            transparent 4px,
+            rgba(255,255,255,.01) 5px
+        );
+
+    pointer-events: none;
+
+    z-index: 999;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+.container {
+    width: min(1180px, 92%);
+    margin: auto;
+}
+
+.section {
+    padding: 110px 0;
+    position: relative;
+}
+
+
+/* =========================================================
+   TOP SYSTEM BAR
+========================================================= */
+
+.system-bar {
+    height: 32px;
+
+    background: #030405;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.08);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: var(--tech);
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: #69747a;
+}
+
+.system-bar span {
+    color: var(--red);
+
+    margin-right: 8px;
+
+    animation: blink 1.5s infinite;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+nav {
+    height: 82px;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    background:
+        linear-gradient(
+            110deg,
+            rgba(7,10,12,.98),
+            rgba(20,25,29,.97),
+            rgba(7,9,11,.98)
+        );
+
+    border-bottom:
+        1px solid rgba(255,38,0,.35);
+
+    box-shadow:
+        0 15px 45px rgba(0,0,0,.55),
+        inset 0 1px 0 rgba(255,255,255,.04);
+}
+
+nav::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -2px;
+
+    width: 25%;
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--red),
+            transparent
+        );
+
+    box-shadow:
+        0 0 10px var(--red);
+}
+
+.nav-inner {
+    height: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-family: var(--tech);
+
+    font-weight: 900;
+
+    font-size: 20px;
+
+    letter-spacing: 2px;
+}
+
+.logo-box {
+    width: 44px;
+    height: 44px;
+
+    display: grid;
+    place-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #252d32,
+            #07090b
+        );
+
+    border:
+        1px solid var(--red);
+
+    color: var(--red);
+
+    clip-path:
+        polygon(
+            15% 0,
+            100% 0,
+            100% 75%,
+            85% 100%,
+            0 100%,
+            0 25%
+        );
+
+    box-shadow:
+        0 0 25px rgba(255,38,0,.18),
+        inset 0 0 15px rgba(255,38,0,.08);
+}
+
+.logo small {
+    display: block;
+
+    color: var(--red);
+
+    font-family: var(--body);
+
+    font-size: 8px;
+
+    letter-spacing: 4px;
+
+    margin-top: -2px;
+}
+
+
+/* MENU */
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+}
+
+.nav-links a {
+    position: relative;
+
+    padding: 14px 15px;
+
+    font-family: var(--tech);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    color: #bdc5c9;
+
+    transition: .25s;
+}
+
+.nav-links a::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        rgba(255,38,0,.08);
+
+    clip-path:
+        polygon(
+            7px 0,
+            100% 0,
+            calc(100% - 7px) 100%,
+            0 100%
+        );
+
+    opacity: 0;
+
+    transition: .25s;
+}
+
+.nav-links a:hover {
+    color: white;
+
+    text-shadow:
+        0 0 15px rgba(255,80,0,.7);
+}
+
+.nav-links a:hover::before {
+    opacity: 1;
+}
+
+
+/* PHONE BUTTON */
+
+.nav-phone {
+    background:
+        linear-gradient(
+            135deg,
+            var(--red),
+            var(--red-dark)
+        );
+
+    border:
+        1px solid #ff5b3c !important;
+
+    color: white !important;
+
+    box-shadow:
+        0 0 25px rgba(255,38,0,.15);
+}
+
+.nav-phone:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 35px rgba(255,38,0,.4);
+}
+
+
+/* MOBILE BUTTON */
+
+.menu-btn {
+    display: none;
+
+    width: 45px;
+    height: 45px;
+
+    border:
+        1px solid var(--red);
+
+    background: #101419;
+
+    cursor: pointer;
+
+    clip-path:
+        polygon(
+            15% 0,
+            100% 0,
+            100% 85%,
+            85% 100%,
+            0 100%,
+            0 15%
+        );
+}
+
+.menu-btn span {
+    display: block;
+
+    width: 22px;
+    height: 2px;
+
+    margin: 5px auto;
+
+    background: var(--red);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height:
+        calc(100vh - 114px);
+
+    display: flex;
+
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 100px 0;
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 720px;
+    height: 720px;
+
+    right: -300px;
+    top: -40px;
+
+    border:
+        1px solid rgba(255,38,0,.10);
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 50px rgba(255,38,0,.015),
+        0 0 0 100px rgba(255,38,0,.01);
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 650px;
+    height: 2px;
+
+    right: -130px;
+    top: 55%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--red),
+            transparent
+        );
+
+    transform: rotate(-35deg);
+
+    opacity: .35;
+}
+
+.hero-grid {
+    display: grid;
+
+    grid-template-columns:
+        1.25fr .75fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+/* STATUS */
+
+.status {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 8px 14px;
+
+    background:
+        rgba(255,38,0,.04);
+
+    border:
+        1px solid rgba(255,38,0,.3);
+
+    font-family: var(--tech);
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: #aab3b7;
+
+    margin-bottom: 25px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: var(--green);
+
+    box-shadow:
+        0 0 15px var(--green);
+
+    animation: pulse 1.5s infinite;
+}
+
+
+/* TITLE */
+
+.hero h1 {
+    font-family: var(--tech);
+
+    font-size:
+        clamp(45px, 7vw, 82px);
+
+    line-height: .95;
+
+    text-transform: uppercase;
+
+    letter-spacing: -2px;
+
+    text-shadow:
+        4px 4px 0 #111,
+        0 0 45px rgba(255,38,0,.12);
+}
+
+.hero h1 span {
+    color: var(--red);
+
+    text-shadow:
+        3px 3px 0 #5c1000,
+        0 0 35px rgba(255,38,0,.4);
+}
+
+.hero-description {
+    max-width: 680px;
+
+    margin-top: 28px;
+
+    color: #abb4b9;
+
+    font-size: 21px;
+
+    line-height: 1.5;
+}
+
+.hero-description strong {
+    color: white;
+}
+
+.hero-location {
+    margin-top: 17px;
+
+    color: var(--orange);
+
+    font-family: var(--tech);
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+
+/* TRAVEL TAGS */
+
+.travel-info {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    margin-top: 18px;
+}
+
+.travel-tag {
+    padding: 10px 13px;
+
+    font-family: var(--tech);
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+
+    clip-path:
+        polygon(
+            7px 0,
+            100% 0,
+            calc(100% - 7px) 100%,
+            0 100%
+        );
+}
+
+.travel-free {
+    color: var(--green);
+
+    background:
+        rgba(50,255,112,.04);
+
+    border:
+        1px solid rgba(50,255,112,.25);
+}
+
+.travel-paid {
+    color: var(--orange);
+
+    background:
+        rgba(255,38,0,.04);
+
+    border:
+        1px solid rgba(255,38,0,.25);
+}
+
+.travel-range {
+    color: #d7dde0;
+
+    background:
+        rgba(255,255,255,.035);
+
+    border:
+        1px solid rgba(255,255,255,.10);
+}
+
+
+/* BUTTONS */
+
+.hero-buttons {
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin-top: 35px;
+}
+
+.btn {
+    min-height: 55px;
+
+    padding: 0 26px;
+
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-family: var(--tech);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    transition: .25s;
+
+    clip-path:
+        polygon(
+            12px 0,
+            100% 0,
+            calc(100% - 12px) 100%,
+            0 100%,
+            0 12px
+        );
+}
+
+.btn-primary {
+    background:
+        linear-gradient(
+            135deg,
+            var(--red),
+            var(--red-dark)
+        );
+
+    color: white;
+
+    box-shadow:
+        0 0 30px rgba(255,38,0,.15);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 40px rgba(255,38,0,.4);
+}
+
+.btn-secondary {
+    background: #13191e;
+
+    border:
+        1px solid #465158;
+
+    color: #d8dfe2;
+}
+
+.btn-secondary:hover {
+    border-color: var(--orange);
+
+    color: white;
+}
+
+
+/* =========================================================
+   HERO TERMINAL
+========================================================= */
+
+.terminal {
+    position: relative;
+
+    padding: 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #171e23,
+            #080b0e
+        );
+
+    border:
+        1px solid rgba(255,255,255,.10);
+
+    clip-path:
+        polygon(
+            0 0,
+            calc(100% - 35px) 0,
+            100% 35px,
+            100% 100%,
+            35px 100%,
+            0 calc(100% - 35px)
+        );
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.55),
+        inset 0 0 30px rgba(255,255,255,.015);
+}
+
+.terminal::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: 35px;
+
+    width: 70px;
+    height: 3px;
+
+    background: var(--red);
+
+    box-shadow:
+        0 0 15px var(--red);
+}
+
+.terminal-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+
+    font-family: var(--tech);
+
+    font-size: 8px;
+
+    color: #667178;
+}
+
+.terminal-top strong {
+    color: var(--red);
+}
+
+.promo-title {
+    font-family: var(--tech);
+
+    font-size: 13px;
+
+    color: var(--orange);
+
+    letter-spacing: 2px;
+}
+
+.promo-price {
+    font-family: var(--tech);
+
+    font-size: 48px;
+
+    font-weight: 900;
+
+    margin: 10px 0;
+}
+
+.promo-price small {
+    font-size: 15px;
+
+    color: #707a80;
+}
+
+.promo-text {
+    color: #969fa4;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+}
+
+.terminal-line {
+    height: 1px;
+
+    background:
+        rgba(255,255,255,.08);
+
+    margin: 20px 0;
+}
+
+.terminal-info {
+    display: grid;
+
+    gap: 10px;
+
+    font-family: var(--tech);
+
+    font-size: 8px;
+
+    color: #69747a;
+}
+
+.terminal-info strong {
+    color: #d9dfe2;
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.mechanical-line {
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    position: relative;
+}
+
+.mechanical-line::before {
+    content: "";
+
+    width: 100%;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #39434a,
+            var(--red),
+            #39434a,
+            transparent
+        );
+}
+
+.mechanical-line::after {
+    content:
+        "◆  SYSTEM / ONLINE  ◆";
+
+    position: absolute;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    background:
+        var(--bg);
+
+    padding:
+        0 20px;
+
+    color: #606b71;
+
+    font-family: var(--tech);
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   SECTION TITLES
+========================================================= */
+
+.section-title {
+    font-family: var(--tech);
+
+    font-size:
+        clamp(28px, 5vw, 50px);
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.section-title span {
+    color: var(--red);
+
+    text-shadow:
+        0 0 20px rgba(255,38,0,.4);
+}
+
+.section-subtitle {
+    max-width: 720px;
+
+    color: var(--gray);
+
+    font-size: 19px;
+
+    margin-bottom: 50px;
+}
+
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.services-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.service {
+    position: relative;
+
+    min-height: 190px;
+
+    padding: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #141b20,
+            #0b0e11
+        );
+
+    border:
+        1px solid rgba(255,255,255,.07);
+
+    clip-path:
+        polygon(
+            0 0,
+            calc(100% - 20px) 0,
+            100% 20px,
+            100% 100%,
+            0 100%
+        );
+
+    transition: .3s;
+}
+
+.service:hover {
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(255,38,0,.45);
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.4);
+}
+
+.service-number {
+    position: absolute;
+
+    top: 18px;
+    right: 20px;
+
+    font-family: var(--tech);
+
+    font-size: 9px;
+
+    color: #414b51;
+}
+
+.service-icon {
+    font-size: 28px;
+
+    margin-bottom: 17px;
+
+    filter: grayscale(1);
+}
+
+.service h3 {
+    font-family: var(--tech);
+
+    font-size: 14px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+}
+
+.service p {
+    color: #818c92;
+
+    font-size: 16px;
+
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   PRICING
+========================================================= */
+
+.pricing-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.price-card {
+    position: relative;
+
+    padding: 28px 23px;
+
+    background:
+        linear-gradient(
+            150deg,
+            #161c20,
+            #090c0f
+        );
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    clip-path:
+        polygon(
+            0 0,
+            calc(100% - 25px) 0,
+            100% 25px,
+            100% 100%,
+            0 100%
+        );
+
+    transition: .3s;
+}
+
+.price-card:hover {
+    transform:
+        translateY(-7px);
+
+    border-color:
+        var(--red);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.45),
+        0 0 30px rgba(255,38,0,.08);
+}
+
+.price-card.featured {
+    border-color:
+        rgba(255,138,0,.55);
+}
+
+.price-card.featured::before {
+    content:
+        "NAJCZĘŚCIEJ WYBIERANY";
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    padding: 7px 10px;
+
+    background:
+        var(--orange);
+
+    color: #080808;
+
+    font-family: var(--tech);
+
+    font-size: 6px;
+
+    font-weight: 900;
+}
+
+.price-card h3 {
+    font-family: var(--tech);
+
+    font-size: 16px;
+
+    margin-bottom: 8px;
+}
+
+.price-card .desc {
+    min-height: 52px;
+
+    color: #78838a;
+
+    font-size: 14px;
+}
+
+.old-price {
+    margin-top: 22px;
+
+    color: #5d666b;
+
+    font-family: var(--tech);
+
+    font-size: 13px;
+
+    text-decoration:
+        line-through;
+}
+
+.price {
+    font-family: var(--tech);
+
+    font-size: 35px;
+
+    font-weight: 900;
+}
+
+.price span {
+    color: var(--red);
+}
+
+.discount-label {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    color: var(--orange);
+
+    font-family: var(--tech);
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+}
+
+.price-list {
+    list-style: none;
+
+    margin-top: 25px;
+
+    padding-top: 18px;
+
+    border-top:
+        1px solid rgba(255,255,255,.07);
+}
+
+.price-list li {
+    color: #9ca6aa;
+
+    font-size: 14px;
+
+    margin-bottom: 10px;
+}
+
+.price-list li::before {
+    content: "▸";
+
+    color: var(--red);
+
+    margin-right: 7px;
+}
+
+
+/* =========================================================
+   SUNDAY
+========================================================= */
+
+.sunday-box {
+    margin-top: 22px;
+
+    padding: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    background:
+        linear-gradient(
+            110deg,
+            rgba(255,138,0,.08),
+            rgba(255,38,0,.025)
+        );
+
+    border:
+        1px solid rgba(255,138,0,.25);
+
+    clip-path:
+        polygon(
+            0 0,
+            calc(100% - 20px) 0,
+            100% 20px,
+            100% 100%,
+            0 100%
+        );
+}
+
+.sunday-icon {
+    font-family: var(--tech);
+
+    font-size: 30px;
+
+    color: var(--orange);
+}
+
+.sunday-box h3 {
+    font-family: var(--tech);
+
+    font-size: 14px;
+
+    margin-bottom: 6px;
+}
+
+.sunday-box p {
+    color: #8d979c;
+
+    font-size: 16px;
+}
+
+.sunday-box strong {
+    color: var(--orange);
+}
+
+
+/* =========================================================
+   DOJAZD
+========================================================= */
+
+.travel-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.travel-card {
+    padding: 35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #151b20,
+            #0a0d10
+        );
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    clip-path:
+        polygon(
+            0 0,
+            calc(100% - 30px) 0,
+            100% 30px,
+            100% 100%,
+            0 100%
+        );
+
+    transition: .3s;
+}
+
+.travel-card:hover {
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(255,38,0,.45);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.4);
+}
+
+.travel-number {
+    font-family: var(--tech);
+
+    font-size: 9px;
+
+    color: #515b61;
+
+    margin-bottom: 15px;
+}
+
+.travel-value {
+    font-family: var(--tech);
+
+    font-size: 36px;
+
+    font-weight: 900;
+
+    margin-bottom: 8px;
+}
+
+.travel-value.green {
+    color: var(--green);
+}
+
+.travel-value.orange {
+    color: var(--orange);
+}
+
+.travel-value.white {
+    color: white;
+}
+
+.travel-card h3 {
+    font-family: var(--tech);
+
+    font-size: 15px;
+
+    margin-bottom: 14px;
+
+    text-transform: uppercase;
+}
+
+.travel-card p {
+    color: #89939a;
+
+    font-size: 17px;
+
+    line-height: 1.5;
+}
+
+.travel-card strong {
+    color: white;
+}
+
+.travel-note {
+    margin-top: 25px;
+
+    padding: 18px 20px;
+
+    border-left:
+        3px solid var(--red);
+
+    background:
+        rgba(255,38,0,.04);
+
+    color: #9ba5aa;
+
+    font-size: 16px;
+}
+
+.travel-note strong {
+    color: white;
+}
+
+
+/* =========================================================
+   LOYALTY
+========================================================= */
+
+.loyalty-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.loyalty-card {
+    padding: 35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #151b20,
+            #0b0e11
+        );
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    clip-path:
+        polygon(
+            0 0,
+            calc(100% - 30px) 0,
+            100% 30px,
+            100% 100%,
+            0 100%
+        );
+
+    transition: .3s;
+}
+
+.loyalty-card:hover {
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(255,38,0,.45);
+}
+
+.stamp-count {
+    font-family: var(--tech);
+
+    font-size: 45px;
+
+    font-weight: 900;
+
+    color: var(--red);
+
+    margin-bottom: 5px;
+}
+
+.loyalty-card h3 {
+    font-family: var(--tech);
+
+    font-size: 17px;
+
+    text-transform: uppercase;
+}
+
+.discount {
+    display: inline-block;
+
+    margin: 18px 0;
+
+    padding: 8px 13px;
+
+    background:
+        var(--red);
+
+    font-family: var(--tech);
+
+    font-weight: 900;
+
+    font-size: 11px;
+
+    clip-path:
+        polygon(
+            7px 0,
+            100% 0,
+            calc(100% - 7px) 100%,
+            0 100%
+        );
+}
+
+.loyalty-card p {
+    color: #89939a;
+
+    font-size: 17px;
+
+    line-height: 1.5;
+}
+
+.loyalty-card strong {
+    color: white;
+}
+
+
+/* =========================================================
+   PROMO
+========================================================= */
+
+.promo-section {
+    padding:
+        40px 0 110px;
+}
+
+.promo-box {
+    padding: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+    background:
+        linear-gradient(
+            110deg,
+            #171d21,
+            #0d1013 60%,
+            #1a0d09
+        );
+
+    border:
+        1px solid rgba(255,38,0,.3);
+
+    clip-path:
+        polygon(
+            0 0,
+            calc(100% - 50px) 0,
+            100% 50px,
+            100% 100%,
+            50px 100%,
+            0 calc(100% - 50px)
+        );
+}
+
+.promo-box h2 {
+    font-family: var(--tech);
+
+    font-size:
+        clamp(28px, 5vw, 52px);
+
+    text-transform: uppercase;
+}
+
+.promo-box h2 span {
+    color: var(--red);
+}
+
+.promo-box p {
+    color: #8c979d;
+
+    font-size: 18px;
+
+    margin-top: 12px;
+}
+
+.promo-badge {
+    min-width: 220px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    background:
+        rgba(255,38,0,.06);
+
+    border:
+        1px solid var(--red);
+}
+
+.promo-badge strong {
+    display: block;
+
+    font-family: var(--tech);
+
+    font-size: 42px;
+
+    color: var(--red);
+}
+
+.promo-badge small {
+    font-family: var(--tech);
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact {
+    text-align: center;
+}
+
+.contact-panel {
+    max-width: 800px;
+
+    margin: auto;
+
+    padding: 55px 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #151b20,
+            #0a0d10
+        );
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    clip-path:
+        polygon(
+            25px 0,
+            calc(100% - 25px) 0,
+            100% 25px,
+            100% calc(100% - 25px),
+            calc(100% - 25px) 100%,
+            25px 100%,
+            0 calc(100% - 25px),
+            0 25px
+        );
+}
+
+.contact-panel h2 {
+    font-family: var(--tech);
+
+    font-size:
+        clamp(28px, 5vw, 48px);
+}
+
+.contact-panel h2 span {
+    color: var(--red);
+}
+
+.contact-panel p {
+    max-width: 600px;
+
+    margin:
+        15px auto 30px;
+
+    color: #8d979c;
+
+    font-size: 18px;
+}
+
+.phone {
+    display: inline-block;
+
+    margin-bottom: 30px;
+
+    font-family: var(--tech);
+
+    font-size:
+        clamp(24px, 5vw, 40px);
+
+    font-weight: 900;
+
+    color: var(--red);
+
+    text-shadow:
+        0 0 20px rgba(255,38,0,.25);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    padding: 30px 0;
+
+    background: #040506;
+
+    border-top:
+        1px solid rgba(255,255,255,.08);
+
+    color: #626c71;
+
+    font-family: var(--tech);
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes pulse {
+
+    0%, 100% {
+        opacity: .5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+}
+
+@keyframes blink {
+
+    0%, 45%, 100% {
+        opacity: 1;
+    }
+
+    50%, 95% {
+        opacity: .3;
+    }
+
+}
+
+@keyframes scan {
+
+    0% {
+        transform:
+            translateY(-100%);
+    }
+
+    100% {
+        transform:
+            translateY(100vh);
+    }
+
+}
+
+.scanline {
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,38,0,.2),
+            transparent
+        );
+
+    z-index: 998;
+
+    pointer-events: none;
+
+    animation:
+        scan 8s linear infinite;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .nav-links {
+        position: absolute;
+
+        top: 82px;
+
+        left: 0;
+        right: 0;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        padding: 15px;
+
+        background:
+            #080b0e;
+
+        border-bottom:
+            1px solid var(--red);
+
+        box-shadow:
+            0 20px 40px rgba(0,0,0,.6);
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 17px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .terminal {
+        max-width: 600px;
+    }
+
+    .pricing-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .services-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .travel-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .section {
+        padding: 75px 0;
+    }
+
+    .hero {
+        padding: 70px 0;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-description {
+        font-size: 18px;
+    }
+
+    .services-grid,
+    .pricing-grid,
+    .loyalty-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .promo-box {
+        padding: 30px 25px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .promo-badge {
+        width: 100%;
+    }
+
+    .terminal {
+        padding: 25px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .logo {
+        font-size: 15px;
+    }
+
+    .logo-box {
+        width: 38px;
+        height: 38px;
+    }
+
+    .system-bar {
+        font-size: 6px;
+        letter-spacing: 1px;
+    }
+
+    .travel-info {
+        flex-direction: column;
+    }
+
+    .travel-tag {
+        width: 100%;
+    }
+
+    .sunday-box {
+        align-items: flex-start;
+    }
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+        font-size: 37px;
+    }
+
+    .section-title {
+        font-size: 27px;
+    }
+
+    .promo-price {
+        font-size: 40px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SCANLINE
+===================================================== -->
+
+<div class="scanline"></div>
+
+
+<!-- =====================================================
+     SYSTEM BAR
+===================================================== -->
+
+<div class="system-bar">
+
+    <span>●</span>
+
+    SYSTEM ONLINE //
+    SZYBKIE MYCIE //
+    MOBILE AUTO DETAILING //
+    GORZÓW WLKP.
+
+</div>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<nav>
+
+    <div class="container nav-inner">
+
+
+        <a href="#start" class="logo">
+
+            <div class="logo-box">
+                SM
+            </div>
+
+            <div>
+
+                SZYBKIE MYCIE
+
+                <small>
+                    AUTO DETAILING
+                </small>
+
+            </div>
+
+        </a>
+
+
+        <div class="nav-links" id="navLinks">
+
+            <a href="#uslugi">
+                USŁUGI
+            </a>
+
+            <a href="#cennik">
+                CENNIK
+            </a>
+
+            <a href="#dojazd">
+                DOJAZD
+            </a>
+
+            <a href="#lojalnosc">
+                LOJALNOŚĆ
+            </a>
+
+            <a href="#promocja">
+                PROMOCJA
+            </a>
+
+            <a href="#kontakt" class="nav-phone">
+                ZADZWOŃ
+            </a>
+
+        </div>
+
+
+        <button
+            class="menu-btn"
+            id="menuBtn"
+            aria-label="Otwórz menu">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+
+    </div>
+
+</nav>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero" id="start">
+
+    <div class="container hero-grid">
+
+
+        <div>
+
+
+            <div class="status">
+
+                <div class="status-dot"></div>
+
+                SYSTEM GOTOWY DO PRACY
+
+            </div>
+
+
+            <h1>
+
+                MOBILNY<br>
+
+                <span>
+                    AUTO DETAILING.
+                </span>
+
+            </h1>
+
+
+            <p class="hero-description">
+
+                Twój samochód nie musi jechać do myjni.
+
+                <strong>
+                    My przyjeżdżamy do niego.
+                </strong>
+
+            </p>
+
+
+            <div class="hero-location">
+
+                ◈ GORZÓW WIELKOPOLSKI + OKOLICE
+
+            </div>
+
+
+            <div class="travel-info">
+
+
+                <div class="travel-tag travel-free">
+
+                    ✓ GORZÓW + OKOLICE —
+                    DOJAZD 0 PLN
+
+                </div>
+
+
+                <div class="travel-tag travel-paid">
+
+                    ◈ POZA OKOLICAMI —
+                    2 PLN / KM
+
+                </div>
+
+
+                <div class="travel-tag travel-range">
+
+                    ⬡ ZASIĘG DO 100 KM
+
+                </div>
+
+
+            </div>
+
+
+            <div class="hero-buttons">
+
+
+                <a
+                    href="#cennik"
+                    class="btn btn-primary">
+
+                    ZOBACZ OFERTĘ
+
+                </a>
+
+
+                <a
+                    href="tel:575913355"
+                    class="btn btn-secondary">
+
+                    ☎ 575 913 355
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+        <!-- TERMINAL -->
+
+        <div class="terminal">
+
+
+            <div class="terminal-top">
+
+                <span>
+                    DETAILING_CORE.exe
+                </span>
+
+                <strong>
+                    ONLINE
+                </strong>
+
+            </div>
+
+
+            <div class="promo-title">
+
+                PIERWSZA WIZYTA
+
+            </div>
+
+
+            <div class="promo-price">
+
+                -20%
+
+                <small>
+                    MINIMUM
+                </small>
+
+            </div>
+
+
+            <p class="promo-text">
+
+                Przy pierwszej wizycie otrzymujesz
+                specjalną cenę na wybrany pakiet.
+                Największa promocja czeka na pakiet
+                Full Detail.
+
+            </p>
+
+
+            <div class="terminal-line"></div>
+
+
+            <div class="terminal-info">
+
+
+                <div>
+                    STATUS:
+                    <strong>GOTOWY</strong>
+                </div>
+
+
+                <div>
+                    TRYB:
+                    <strong>MOBILNY</strong>
+                </div>
+
+
+                <div>
+                    BAZA:
+                    <strong>GORZÓW WLKP.</strong>
+                </div>
+
+
+                <div>
+                    DOJAZD:
+                    <strong>0 PLN — OKOLICE</strong>
+                </div>
+
+
+                <div>
+                    DALSZA STREFA:
+                    <strong>2 PLN / KM</strong>
+                </div>
+
+
+                <div>
+                    ZASIĘG:
+                    <strong>DO 100 KM</strong>
+                </div>
+
+
+                <div>
+                    PRACA:
+                    <strong>PON — SOB</strong>
+                </div>
+
+
+                <div>
+                    NIEDZIELA:
+                    <strong>+20%</strong>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<div class="mechanical-line"></div>
+
+
+<!-- =====================================================
+     USŁUGI
+===================================================== -->
+
+<section class="section" id="uslugi">
 
     <div class="container">
 
+
         <h2 class="section-title">
-            STREFA <span>DOJAZDU</span>
+
+            SYSTEM
+            <span>USŁUG</span>
+
         </h2>
 
+
         <p class="section-subtitle">
-            Nie musisz przyjeżdżać do nas.
-            To my przyjeżdżamy do Ciebie.
+
+            Kompleksowe przygotowanie auta
+            bez konieczności ruszania się z domu.
+
         </p>
 
-        <div class="loyalty-grid">
 
-            <div class="loyalty-card">
+        <div class="services-grid">
 
-                <div class="stamp-count">
-                    0 PLN
+
+            <div class="service">
+
+                <div class="service-number">
+                    01
+                </div>
+
+                <div class="service-icon">
+                    ◈
                 </div>
 
                 <h3>
-                    GORZÓW + OKOLICE
+                    MYCIE DETAILINGOWE
                 </h3>
 
-                <div class="discount">
-                    DOJAZD GRATIS
-                </div>
-
                 <p>
-                    Na terenie Gorzowa Wielkopolskiego
-                    oraz najbliższych okolic
-                    <strong>dojazd jest całkowicie bezpłatny.</strong>
+                    Dokładne i bezpieczne mycie
+                    zewnętrzne samochodu.
                 </p>
 
             </div>
 
 
-            <div class="loyalty-card">
+            <div class="service">
 
-                <div class="stamp-count">
-                    2 PLN
+                <div class="service-number">
+                    02
+                </div>
+
+                <div class="service-icon">
+                    ◉
                 </div>
 
                 <h3>
-                    STREFA 100 KM
+                    CZYSZCZENIE WNĘTRZA
                 </h3>
 
-                <div class="discount">
-                    2 PLN / KM
-                </div>
-
                 <p>
-                    Działamy również do
-                    <strong>100 km od Gorzowa Wielkopolskiego.</strong>
-                    Poza bezpłatną strefą dojazd kosztuje
-                    <strong>2 PLN za kilometr.</strong>
+                    Odkurzanie, plastiki, kokpit,
+                    zakamarki oraz szyby.
                 </p>
 
             </div>
+
+
+            <div class="service">
+
+                <div class="service-number">
+                    03
+                </div>
+
+                <div class="service-icon">
+                    ◆
+                </div>
+
+                <h3>
+                    PRANIE TAPICERKI
+                </h3>
+
+                <p>
+                    Dokładne czyszczenie foteli,
+                    kanapy oraz elementów materiałowych.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-number">
+                    04
+                </div>
+
+                <div class="service-icon">
+                    ⬡
+                </div>
+
+                <h3>
+                    DEKONTAMINACJA
+                </h3>
+
+                <p>
+                    Usuwanie smoły, owadów,
+                    lotnej rdzy i trudnych zabrudzeń.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-number">
+                    05
+                </div>
+
+                <div class="service-icon">
+                    ✦
+                </div>
+
+                <h3>
+                    OZONOWANIE
+                </h3>
+
+                <p>
+                    Odświeżenie wnętrza oraz
+                    neutralizacja nieprzyjemnych zapachów.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-number">
+                    06
+                </div>
+
+                <div class="service-icon">
+                    ⚙
+                </div>
+
+                <h3>
+                    FULL DETAIL
+                </h3>
+
+                <p>
+                    Kompleksowa obsługa samochodu
+                    z zewnątrz oraz wewnątrz.
+                </p>
+
+            </div>
+
 
         </div>
 
     </div>
 
 </section>
+
+
+<div class="mechanical-line"></div>
+
+
+<!-- =====================================================
+     CENNIK
+===================================================== -->
+
+<section class="section" id="cennik">
+
+    <div class="container">
+
+
+        <h2 class="section-title">
+
+            CENNIK
+            <span>PAKIETÓW</span>
+
+        </h2>
+
+
+        <p class="section-subtitle">
+
+            Standardowe ceny obowiązują
+            od poniedziałku do soboty.
+
+        </p>
+
+
+        <div class="pricing-grid">
+
+
+            <!-- BASIC -->
+
+            <div class="price-card">
+
+
+                <h3>
+                    BASIC
+                </h3>
+
+
+                <div class="desc">
+
+                    Szybkie odświeżenie samochodu.
+
+                </div>
+
+
+                <div class="old-price">
+
+                    CENA STANDARDOWA
+
+                </div>
+
+
+                <div class="price">
+
+                    159
+                    <span>PLN</span>
+
+                </div>
+
+
+                <div class="discount-label">
+
+                    PIERWSZA WIZYTA: -20% → 127 PLN
+
+                </div>
+
+
+                <ul class="price-list">
+
+                    <li>
+                        Mycie zewnętrzne
+                    </li>
+
+                    <li>
+                        Osuszenie
+                    </li>
+
+                    <li>
+                        Odkurzanie
+                    </li>
+
+                    <li>
+                        Szyby
+                    </li>
+
+                </ul>
+
+
+            </div>
+
+
+            <!-- STANDARD -->
+
+            <div class="price-card featured">
+
+
+                <h3>
+                    STANDARD
+                </h3>
+
+
+                <div class="desc">
+
+                    Pełniejsze odświeżenie samochodu.
+
+                </div>
+
+
+                <div class="old-price">
+
+                    CENA STANDARDOWA
+
+                </div>
+
+
+                <div class="price">
+
+                    199
+                    <span>PLN</span>
+
+                </div>
+
+
+                <div class="discount-label">
+
+                    PIERWSZA WIZYTA: -25% → 149 PLN
+
+                </div>
+
+
+                <ul class="price-list">
+
+                    <li>
+                        Mycie detailingowe
+                    </li>
+
+                    <li>
+                        Odkurzanie wnętrza
+                    </li>
+
+                    <li>
+                        Czyszczenie plastików
+                    </li>
+
+                    <li>
+                        Szyby
+                    </li>
+
+                    <li>
+                        Felgi
+                    </li>
+
+                </ul>
+
+
+            </div>
+
+
+            <!-- PREMIUM -->
+
+            <div class="price-card">
+
+
+                <h3>
+                    PREMIUM
+                </h3>
+
+
+                <div class="desc">
+
+                    Dokładne czyszczenie samochodu.
+
+                </div>
+
+
+                <div class="old-price">
+
+                    CENA STANDARDOWA
+
+                </div>
+
+
+                <div class="price">
+
+                    299
+                    <span>PLN</span>
+
+                </div>
+
+
+                <div class="discount-label">
+
+                    PIERWSZA WIZYTA: -35% → 194 PLN
+
+                </div>
+
+
+                <ul class="price-list">
+
+                    <li>
+                        Mycie detailingowe
+                    </li>
+
+                    <li>
+                        Dokładne wnętrze
+                    </li>
+
+                    <li>
+                        Czyszczenie plastików
+                    </li>
+
+                    <li>
+                        Dekontaminacja
+                    </li>
+
+                    <li>
+                        Felgi + opony
+                    </li>
+
+                    <li>
+                        Dressingi
+                    </li>
+
+                </ul>
+
+
+            </div>
+
+
+            <!-- FULL DETAIL -->
+
+            <div class="price-card">
+
+
+                <h3>
+                    FULL DETAIL
+                </h3>
+
+
+                <div class="desc">
+
+                    Kompleksowa transformacja auta.
+
+                </div>
+
+
+                <div class="old-price">
+
+                    CENA STANDARDOWA
+
+                </div>
+
+
+                <div class="price">
+
+                    699
+                    <span>PLN</span>
+
+                </div>
+
+
+                <div class="discount-label">
+
+                    PIERWSZA WIZYTA: -45% → 384 PLN
+
+                </div>
+
+
+                <ul class="price-list">
+
+                    <li>
+                        Pełny detailing zewnętrzny
+                    </li>
+
+                    <li>
+                        Pełny detailing wnętrza
+                    </li>
+
+                    <li>
+                        Dekontaminacja
+                    </li>
+
+                    <li>
+                        Pranie wybranych elementów
+                    </li>
+
+                    <li>
+                        Ozonowanie
+                    </li>
+
+                    <li>
+                        Kompleksowe wykończenie
+                    </li>
+
+                </ul>
+
+
+            </div>
+
+
+        </div>
+
+
+        <!-- NIEDZIELA -->
+
+        <div class="sunday-box">
+
+
+            <div class="sunday-icon">
+                ◷
+            </div>
+
+
+            <div>
+
+                <h3>
+                    NIEDZIELA — TRYB SPECJALNY
+                </h3>
+
+
+                <p>
+
+                    Pracujemy od
+                    <strong>poniedziałku do soboty</strong>
+                    w standardowych cenach.
+                    W niedzielę realizujemy usługi za
+                    <strong>+20% ceny wybranego pakietu</strong>.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<div class="mechanical-line"></div>
+
+
+<!-- =====================================================
+     DOJAZD
+===================================================== -->
+
+<section class="section" id="dojazd">
+
+    <div class="container">
+
+
+        <h2 class="section-title">
+
+            STREFA
+            <span>DOJAZDU</span>
+
+        </h2>
+
+
+        <p class="section-subtitle">
+
+            Nie musisz przyjeżdżać do nas.
+            To my przyjeżdżamy do Ciebie.
+
+        </p>
+
+
+        <div class="travel-grid">
+
+
+            <!-- GORZÓW -->
+
+            <div class="travel-card">
+
+
+                <div class="travel-number">
+                    ZONE / 01
+                </div>
+
+
+                <div class="travel-value green">
+                    0 PLN
+                </div>
+
+
+                <h3>
+                    GORZÓW WLKP.
+                </h3>
+
+
+                <p>
+
+                    Na terenie Gorzowa Wielkopolskiego
+                    dojazd do klienta jest
+                    <strong>bezpłatny</strong>.
+
+                </p>
+
+
+            </div>
+
+
+            <!-- OKOLICE -->
+
+            <div class="travel-card">
+
+
+                <div class="travel-number">
+                    ZONE / 02
+                </div>
+
+
+                <div class="travel-value green">
+                    0 PLN
+                </div>
+
+
+                <h3>
+                    OKOLICE GORZOWA
+                </h3>
+
+
+                <p>
+
+                    W najbliższych okolicach Gorzowa
+                    również oferujemy
+                    <strong>bezpłatny dojazd</strong>.
+
+                </p>
+
+
+            </div>
+
+
+            <!-- 100 KM -->
+
+            <div class="travel-card">
+
+
+                <div class="travel-number">
+                    ZONE / 03
+                </div>
+
+
+                <div class="travel-value orange">
+                    2 PLN / KM
+                </div>
+
+
+                <h3>
+                    DO 100 KM
+                </h3>
+
+
+                <p>
+
+                    Dojeżdżamy maksymalnie
+                    <strong>100 km od Gorzowa Wielkopolskiego</strong>.
+
+                    Poza bezpłatną strefą pobieramy
+                    <strong>2 PLN za każdy kilometr</strong>.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="travel-note">
+
+            <strong>JAK LICZYMY DOJAZD?</strong>
+
+            Opłata 2 PLN/km jest liczona
+            <strong>w jedną stronę</strong>,
+            od Gorzowa Wielkopolskiego do miejsca wykonania usługi.
+
+            <br><br>
+
+            Przykład:
+            <strong>50 km od Gorzowa = 100 PLN za dojazd.</strong>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<div class="mechanical-line"></div>
+
+
+<!-- =====================================================
+     LOJALNOŚĆ
+===================================================== -->
+
+<section class="section" id="lojalnosc">
+
+    <div class="container">
+
+
+        <h2 class="section-title">
+
+            PROGRAM
+            <span>LOJALNOŚCIOWY</span>
+
+        </h2>
+
+
+        <p class="section-subtitle">
+
+            Zbieraj pieczątki po wizytach
+            i odblokowuj większe rabaty.
+
+        </p>
+
+
+        <div class="loyalty-grid">
+
+
+            <!-- 10 -->
+
+            <div class="loyalty-card">
+
+
+                <div class="stamp-count">
+                    10
+                </div>
+
+
+                <h3>
+                    PIECZĄTEK
+                </h3>
+
+
+                <div class="discount">
+                    -50%
+                </div>
+
+
+                <p>
+
+                    Po zebraniu 10 pieczątek otrzymujesz
+                    <strong>-50%</strong> na detailing
+                    od pakietu
+                    <strong>Standard</strong>
+                    wzwyż.
+
+                </p>
+
+
+            </div>
+
+
+            <!-- 20 -->
+
+            <div class="loyalty-card">
+
+
+                <div class="stamp-count">
+                    20
+                </div>
+
+
+                <h3>
+                    PIECZĄTEK
+                </h3>
+
+
+                <div class="discount">
+                    -70%
+                </div>
+
+
+                <p>
+
+                    Po zebraniu 20 pieczątek otrzymujesz
+                    <strong>-70%</strong> na detailing
+                    od pakietu
+                    <strong>Premium</strong>
+                    wzwyż.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROMOCJA
+===================================================== -->
+
+<section class="promo-section" id="promocja">
+
+    <div class="container">
+
+
+        <div class="promo-box">
+
+
+            <div>
+
+
+                <h2>
+
+                    PIERWSZA
+                    <br>
+
+                    <span>
+                        WIZYTA.
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    Nowy klient = specjalna cena startowa.
+                    Sprawdź pakiet dopasowany do Twojego auta.
+
+                </p>
+
+
+            </div>
+
+
+            <div class="promo-badge">
+
+                <strong>
+                    -45%
+                </strong>
+
+                <small>
+
+                    FULL DETAIL
+
+                    <br>
+
+                    PIERWSZA WIZYTA
+
+                </small>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     KONTAKT
+===================================================== -->
+
+<section class="section contact" id="kontakt">
+
+    <div class="container">
+
+
+        <div class="contact-panel">
+
+
+            <h2>
+
+                URUCHOM
+
+                <span>
+                    DETAILING
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                Zadzwoń i umów termin.
+                Przyjedziemy pod wskazane miejsce
+                i zajmiemy się Twoim samochodem.
+
+            </p>
+
+
+            <a
+                href="tel:575913355"
+                class="phone">
+
+                575 913 355
+
+            </a>
+
+
+            <br>
+
+
+            <a
+                href="tel:575913355"
+                class="btn btn-primary">
+
+                ZAREZERWUJ TERMIN
+
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    © 2026 SZYBKIE MYCIE //
+
+    MOBILNY AUTO DETAILING //
+
+    GORZÓW WIELKOPOLSKI //
+
+    PONIEDZIAŁEK – SOBOTA //
+
+    DO 100 KM
+
+</footer>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+const menuBtn =
+    document.getElementById("menuBtn");
+
+const navLinks =
+    document.getElementById("navLinks");
+
+
+menuBtn.addEventListener(
+    "click",
+    () => {
+
+        navLinks.classList.toggle("open");
+
+    }
+);
+
+
+/* Zamknięcie menu po kliknięciu */
+
+document
+    .querySelectorAll(".nav-links a")
+    .forEach(link => {
+
+        link.addEventListener(
+            "click",
+            () => {
+
+                navLinks.classList.remove("open");
+
+            }
+        );
+
+    });
+
+
+/* =========================================================
+   NAVBAR EFFECT
+========================================================= */
+
+window.addEventListener(
+    "scroll",
+    () => {
+
+        const nav =
+            document.querySelector("nav");
+
+
+        if (window.scrollY > 30) {
+
+            nav.style.boxShadow =
+                "0 15px 50px rgba(0,0,0,.75), inset 0 1px 0 rgba(255,38,0,.15)";
+
+        } else {
+
+            nav.style.boxShadow =
+                "0 15px 45px rgba(0,0,0,.55), inset 0 1px 0 rgba(255,255,255,.04)";
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   YEAR
+========================================================= */
+
+const yearElements =
+    document.querySelectorAll("[data-year]");
+
+yearElements.forEach(
+    element => {
+
+        element.textContent =
+            new Date().getFullYear();
+
+    }
+);
+
+
+</script>
+
+
+</body>
+</html>
