@@ -6,1255 +6,1840 @@
 
 <title>SZYBKIE MYCIE | Mobilny Auto Detailing</title>
 
-<meta name="description"
-content="Szybkie Mycie – mobilny auto detailing w Gorzowie Wielkopolskim i okolicach. Dojazd do klienta do 100 km.">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
 
-:root {
-    --bg:#06080a;
-    --bg2:#0b0f12;
-    --panel:#10161b;
-    --panel2:#151c21;
-
-    --red:#ff2600;
-    --red-dark:#941800;
-    --orange:#ff8a00;
-    --green:#32ff70;
-
-    --white:#f4f6f7;
-    --gray:#a0aaaf;
-    --dark-gray:#586268;
-
-    --heading:'Montserrat', sans-serif;
-    --body:'Inter', sans-serif;
-}
+/* =========================================================
+   RESET
+========================================================= */
 
 * {
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-    scroll-behavior:smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-    background:var(--bg);
-    color:var(--white);
-    font-family:var(--body);
-    line-height:1.6;
-    overflow-x:hidden;
+    background: #050608;
+    color: #f4f6f7;
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
 }
 
 a {
-    color:inherit;
-    text-decoration:none;
+    color: inherit;
+    text-decoration: none;
 }
 
 button {
-    font-family:inherit;
+    font-family: inherit;
 }
 
-/* =========================
-   CONTAINER
-========================= */
 
-.container {
-    width:min(1180px,92%);
-    margin:auto;
-}
-
-/* =========================
-   NAV
-========================= */
-
-nav {
-    position:fixed;
-    top:0;
-    left:0;
-    right:0;
-    z-index:1000;
-
-    background:rgba(6,8,10,.92);
-    backdrop-filter:blur(14px);
-
-    border-bottom:1px solid #20272b;
-}
-
-.nav-inner {
-    min-height:78px;
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-}
-
-.logo {
-    display:flex;
-    align-items:center;
-    gap:12px;
-
-    font-family:var(--heading);
-    font-weight:900;
-    font-size:16px;
-}
-
-.logo small {
-    display:block;
-    font-size:8px;
-    color:var(--gray);
-    letter-spacing:2px;
-}
-
-.logo-box {
-    width:42px;
-    height:42px;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    border:2px solid var(--red);
-
-    color:var(--red);
-
-    font-size:14px;
-    font-weight:900;
-}
-
-.nav-links {
-    display:flex;
-    align-items:center;
-    gap:20px;
-
-    font-size:11px;
-    font-weight:700;
-}
-
-.nav-links a {
-    transition:.2s;
-}
-
-.nav-links a:hover {
-    color:var(--red);
-}
-
-.nav-phone {
-    padding:10px 16px;
-
-    border:1px solid var(--red);
-    color:var(--red);
-
-    transition:.2s;
-}
-
-.nav-phone:hover {
-    background:var(--red);
-    color:white !important;
-}
-
-.menu-btn {
-    display:none;
-
-    width:40px;
-    height:40px;
-
-    background:none;
-    border:1px solid #333;
-
-    cursor:pointer;
-}
-
-.menu-btn span {
-    display:block;
-    width:20px;
-    height:2px;
-    background:white;
-
-    margin:4px auto;
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero {
-    min-height:100vh;
-
-    padding-top:120px;
-    padding-bottom:80px;
-
-    display:flex;
-    align-items:center;
-
-    background:
-        radial-gradient(
-            circle at 80% 20%,
-            rgba(255,38,0,.12),
-            transparent 35%
-        ),
-
-        radial-gradient(
-            circle at 20% 80%,
-            rgba(255,138,0,.05),
-            transparent 30%
-        ),
-
-        linear-gradient(
-            180deg,
-            #06080a,
-            #090d10
-        );
-
-    position:relative;
-}
-
-.hero-grid {
-    display:grid;
-    grid-template-columns:1.15fr .85fr;
-    gap:70px;
-    align-items:center;
-}
-
-.badge {
-    display:inline-flex;
-
-    padding:8px 13px;
-
-    border:1px solid #343c40;
-
-    color:var(--green);
-
-    font-size:11px;
-    font-weight:800;
-    letter-spacing:1px;
-
-    margin-bottom:25px;
-}
-
-.hero h1 {
-    font-family:var(--heading);
-
-    font-size:clamp(
-        42px,
-        7vw,
-        82px
-    );
-
-    line-height:.98;
-
-    margin-bottom:25px;
-
-    letter-spacing:-3px;
-}
-
-.hero h1 span {
-    color:var(--red);
-}
-
-.hero-description {
-    color:var(--gray);
-
-    max-width:650px;
-
-    font-size:18px;
-
-    margin-bottom:30px;
-}
-
-.hero-buttons {
-    display:flex;
-    flex-wrap:wrap;
-    gap:12px;
-
-    margin-bottom:30px;
-}
-
-.btn {
-    display:inline-flex;
-
-    justify-content:center;
-    align-items:center;
-
-    padding:14px 22px;
-
-    font-weight:800;
-    font-size:13px;
-
-    border:1px solid var(--red);
-
-    transition:.25s;
-}
-
-.btn-primary {
-    background:var(--red);
-    color:white;
-}
-
-.btn-primary:hover {
-    background:#d91f00;
-    transform:translateY(-2px);
-}
-
-.btn-secondary {
-    color:var(--white);
-}
-
-.btn-secondary:hover {
-    background:rgba(255,38,0,.08);
-}
-
-.hero-info {
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-}
-
-.info-box {
-    border:1px solid #293136;
-
-    padding:10px 13px;
-
-    font-size:11px;
-
-    color:var(--gray);
-}
-
-.info-box strong {
-    color:var(--white);
-}
-
-/* =========================
-   TERMINAL
-========================= */
-
-.terminal {
-    background:#0c1115;
-
-    border:1px solid #30383d;
-
-    padding:25px;
-
-    box-shadow:
-        0 30px 70px rgba(0,0,0,.4),
-        inset 0 0 50px rgba(255,255,255,.01);
-}
-
-.terminal-top {
-    display:flex;
-
-    justify-content:space-between;
-
-    border-bottom:1px solid #242b2f;
-
-    padding-bottom:15px;
-
-    margin-bottom:20px;
-}
-
-.terminal-title {
-    font-family:var(--heading);
-
-    font-weight:800;
-
-    font-size:13px;
-}
-
-.status {
-    color:var(--red);
-
-    font-size:10px;
-
-    font-weight:900;
-
-    letter-spacing:1px;
-}
-
-.terminal-row {
-    display:flex;
-
-    justify-content:space-between;
-
-    padding:11px 0;
-
-    border-bottom:1px solid #1e2529;
-
-    font-size:12px;
-}
-
-.terminal-row span:first-child {
-    color:#737e84;
-}
-
-.terminal-row strong {
-    color:white;
-}
-
-/* =========================
-   SEKCJE
-========================= */
-
-section {
-    padding:100px 0;
-}
-
-.section-header {
-    margin-bottom:50px;
-}
-
-.section-label {
-    color:var(--red);
-
-    font-size:11px;
-
-    font-weight:900;
-
-    letter-spacing:2px;
-
-    margin-bottom:10px;
-}
-
-.section-header h2 {
-    font-family:var(--heading);
-
-    font-size:clamp(
-        30px,
-        5vw,
-        52px
-    );
-
-    line-height:1.05;
-}
-
-.section-header p {
-    max-width:650px;
-
-    margin-top:15px;
-
-    color:var(--gray);
-}
-
-/* =========================
-   USŁUGI
-========================= */
-
-.services-grid {
-    display:grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-
-    gap:15px;
-}
-
-.service-card {
-    padding:28px 22px;
-
-    background:var(--panel);
-
-    border:1px solid #252d31;
-
-    transition:.25s;
-}
-
-.service-card:hover {
-    transform:translateY(-5px);
-
-    border-color:var(--red);
-}
-
-.service-number {
-    color:var(--red);
-
-    font-family:var(--heading);
-
-    font-weight:900;
-
-    margin-bottom:20px;
-}
-
-.service-card h3 {
-    font-family:var(--heading);
-
-    font-size:18px;
-
-    margin-bottom:12px;
-}
-
-.service-card p {
-    color:var(--gray);
-
-    font-size:13px;
-}
-
-/* =========================
-   CENNIK
-========================= */
-
-.prices {
-    background:var(--bg2);
-}
-
-.prices-grid {
-    display:grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-
-    gap:15px;
-}
-
-.price-card {
-    background:var(--panel);
-
-    border:1px solid #252d31;
-
-    padding:30px 22px;
-
-    position:relative;
+/* =========================================================
+   ZMIENNE
+========================================================= */
 
-    transition:.25s;
-}
-
-.price-card:hover {
-    transform:translateY(-5px);
-
-    border-color:var(--red);
-}
-
-.price-card.featured {
-    border-color:var(--red);
-
-    box-shadow:
-        0 0 30px rgba(255,38,0,.08);
-}
-
-.price-card h3 {
-    font-family:var(--heading);
-
-    font-size:18px;
-}
-
-.old-price {
-    color:#697378;
-
-    text-decoration:line-through;
-
-    font-size:14px;
-
-    margin-top:15px;
-}
-
-.price {
-    font-family:var(--heading);
-
-    font-size:35px;
-
-    font-weight:900;
-
-    margin:3px 0 8px;
-}
-
-.price span {
-    font-size:13px;
-
-    color:var(--gray);
-}
-
-.first-visit {
-    color:var(--green);
-
-    font-size:12px;
-
-    font-weight:800;
-
-    margin-bottom:20px;
-}
-
-.price-card ul {
-    list-style:none;
-}
-
-.price-card li {
-    color:var(--gray);
-
-    font-size:12px;
-
-    padding:7px 0;
-
-    border-bottom:1px solid #20272b;
-}
-
-.price-card li::before {
-    content:"✓";
-
-    color:var(--red);
-
-    margin-right:8px;
-}
-
-.special-prices {
-    display:grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap:15px;
-
-    margin-top:25px;
-}
-
-.special-box {
-    padding:22px;
-
-    border:1px solid #252d31;
-
-    background:var(--panel);
-}
-
-.special-box h3 {
-    font-family:var(--heading);
-
-    font-size:16px;
-
-    margin-bottom:8px;
-}
-
-.special-box p {
-    color:var(--gray);
-
-    font-size:13px;
-}
-
-.special-box strong {
-    color:var(--red);
-}
-
-/* =========================
-   DOJAZD
-========================= */
-
-.travel-grid {
-    display:grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap:20px;
-}
-
-.travel-card {
-    padding:35px;
-
-    background:var(--panel);
-
-    border:1px solid #252d31;
-}
-
-.travel-card h3 {
-    font-family:var(--heading);
-
-    font-size:20px;
-
-    margin-bottom:15px;
-}
-
-.travel-big {
-    color:var(--red);
-
-    font-family:var(--heading);
-
-    font-size:42px;
-
-    font-weight:900;
-
-    margin-bottom:10px;
-}
-
-.travel-card p {
-    color:var(--gray);
-
-    font-size:14px;
-}
-
-.travel-example {
-    margin-top:20px;
-
-    padding:15px;
-
-    border-left:3px solid var(--red);
-
-    background:rgba(255,38,0,.04);
-
-    color:var(--gray);
-
-    font-size:13px;
-}
-
-.travel-example strong {
-    color:var(--white);
-}
-
-/* =========================
-   LOJALNOŚĆ
-========================= */
-
-.loyalty {
-    background:var(--bg2);
-}
-
-.loyalty-grid {
-    display:grid;
-
-    grid-template-columns:
-        1fr 1fr;
+:root {
+    --red: #ff2600;
+    --red2: #ff4b22;
+    --orange: #ff8500;
 
-    gap:20px;
-}
-
-.loyalty-card {
-    background:var(--panel);
-
-    border:1px solid #252d31;
-
-    padding:35px;
-
-    position:relative;
-
-    transition:.25s;
-}
-
-.loyalty-card:hover {
-    transform:translateY(-5px);
-
-    border-color:var(--red);
-}
-
-.loyalty-card h3 {
-    font-family:var(--heading);
-
-    font-size:20px;
-}
-
-.loyalty-number {
-    color:var(--red);
-
-    font-family:var(--heading);
-
-    font-size:60px;
-
-    font-weight:900;
-
-    line-height:1;
-
-    margin:20px 0 10px;
-}
-
-.discount {
-    color:var(--green);
-
-    font-family:var(--heading);
-
-    font-size:32px;
-
-    font-weight:900;
-}
-
-.loyalty-card p {
-    color:var(--gray);
-
-    margin-top:10px;
-}
-
-/* =========================
-   POLEĆ ZNAJOMEMU
-========================= */
-
-.referral {
-    position:relative;
-
-    overflow:hidden;
-}
-
-.referral::before {
-    content:"";
-
-    position:absolute;
-
-    width:450px;
-    height:450px;
-
-    border-radius:50%;
-
-    background:rgba(255,38,0,.06);
-
-    filter:blur(70px);
-
-    right:-180px;
-    top:-100px;
-
-    pointer-events:none;
-}
-
-.referral-grid {
-    display:grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap:20px;
-
-    position:relative;
-}
+    --white: #f5f6f7;
+    --gray: #929ba0;
+    --gray2: #626b70;
 
-.referral-card {
-    background:var(--panel);
+    --bg: #050608;
+    --bg2: #090c0f;
 
-    border:1px solid #252d31;
+    --panel: #0d1114;
+    --panel2: #11171b;
 
-    padding:35px;
+    --border: #252c30;
 
-    transition:.25s;
-}
-
-.referral-card:hover {
-    transform:translateY(-5px);
-
-    border-color:var(--red);
-}
-
-.referral-icon {
-    width:50px;
-    height:50px;
-
-    display:flex;
-
-    align-items:center;
-    justify-content:center;
-
-    border:1px solid var(--red);
-
-    color:var(--red);
-
-    font-family:var(--heading);
-
-    font-size:20px;
-
-    font-weight:900;
-
-    margin-bottom:20px;
-}
-
-.referral-card h3 {
-    font-family:var(--heading);
-
-    font-size:22px;
-
-    margin-bottom:10px;
-}
-
-.referral-card p {
-    color:var(--gray);
-
-    font-size:14px;
-}
-
-.referral-steps {
-    display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
+    --green: #38ff78;
 
-    gap:10px;
-
-    margin-top:25px;
-}
-
-.referral-step {
-    padding:18px 10px;
-
-    border:1px solid #2a3237;
-
-    text-align:center;
-
-    transition:.2s;
-}
-
-.referral-step:hover {
-    border-color:var(--red);
-}
-
-.referral-step strong {
-    display:block;
-
-    font-family:var(--heading);
-
-    font-size:25px;
-
-    color:var(--red);
-}
-
-.referral-step span {
-    display:block;
-
-    margin-top:5px;
-
-    color:var(--gray);
-
-    font-size:11px;
+    --heading: "Montserrat", sans-serif;
 }
 
-.referral-note {
-    margin-top:20px;
 
-    color:var(--green);
+/* =========================================================
+   TŁO / CARBON
+========================================================= */
 
-    font-size:12px;
+body::before {
+    content: "";
 
-    font-weight:800;
-}
-
-.referral-highlight {
-    color:var(--red);
-
-    font-family:var(--heading);
+    position: fixed;
+    inset: 0;
 
-    font-weight:900;
-}
+    pointer-events: none;
 
-/* =========================
-   PROMOCJA
-========================= */
-
-.promotion {
-    padding-top:70px;
-}
+    opacity: .22;
 
-.promotion-box {
     background:
         linear-gradient(
             135deg,
-            rgba(255,38,0,.12),
+            rgba(255,255,255,.025) 25%,
+            transparent 25%
+        ),
+        linear-gradient(
+            315deg,
+            rgba(255,255,255,.025) 25%,
+            transparent 25%
+        );
+
+    background-size: 8px 8px;
+
+    z-index: -2;
+}
+
+body::after {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(255,38,0,.08),
+            transparent 30%
+        );
+
+    z-index: -3;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #030405;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3a3f42;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--red);
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+    width: min(1180px, 92%);
+    margin: auto;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+nav {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 1000;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(4,5,7,.97),
+            rgba(4,5,7,.82)
+        );
+
+    backdrop-filter: blur(16px);
+
+    border-bottom: 1px solid #20262a;
+}
+
+.nav-inner {
+    min-height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-family: var(--heading);
+    font-weight: 900;
+
+    letter-spacing: -.5px;
+}
+
+.logo-box {
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    font-size: 13px;
+
+    border: 2px solid var(--red);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,38,0,.22),
             transparent
+        );
+
+    box-shadow:
+        0 0 20px rgba(255,38,0,.12);
+}
+
+.logo small {
+    display: block;
+
+    margin-top: 2px;
+
+    color: #737c81;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.nav-links a {
+    transition: .2s;
+}
+
+.nav-links a:hover {
+    color: var(--red);
+}
+
+.nav-phone {
+    padding: 11px 17px;
+
+    border: 1px solid var(--red);
+
+    color: var(--red);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.nav-phone::before {
+    content: "";
+
+    position: absolute;
+
+    left: -100%;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: var(--red);
+
+    transition: .3s;
+
+    z-index: -1;
+}
+
+.nav-phone:hover {
+    color: white;
+}
+
+.nav-phone:hover::before {
+    left: 0;
+}
+
+.menu-btn {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    background: transparent;
+
+    border: 1px solid #30373b;
+
+    cursor: pointer;
+}
+
+.menu-btn span {
+    display: block;
+
+    width: 20px;
+    height: 2px;
+
+    margin: 4px auto;
+
+    background: white;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: 100vh;
+
+    padding-top: 125px;
+    padding-bottom: 80px;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            ellipse at 75% 50%,
+            rgba(255,38,0,.11),
+            transparent 30%
+        ),
+        linear-gradient(
+            180deg,
+            #050608 0%,
+            #080b0e 100%
+        );
+}
+
+
+/* linie garażowe */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: 14%;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,38,0,.5),
+            transparent
+        );
+
+    opacity: .45;
+}
+
+.hero-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 50px;
+
+    align-items: center;
+}
+
+.hero-left {
+    position: relative;
+
+    z-index: 2;
+}
+
+.badge {
+    display: inline-flex;
+
+    padding: 8px 12px;
+
+    margin-bottom: 23px;
+
+    border: 1px solid #30383d;
+
+    color: var(--green);
+
+    background: rgba(0,0,0,.35);
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+
+    box-shadow:
+        inset 0 0 20px rgba(255,255,255,.015);
+}
+
+.hero h1 {
+    font-family: var(--heading);
+
+    font-size: clamp(
+        44px,
+        6vw,
+        79px
+    );
+
+    line-height: .94;
+
+    letter-spacing: -4px;
+
+    font-weight: 900;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: var(--red);
+
+    text-shadow:
+        0 0 30px rgba(255,38,0,.18);
+}
+
+.hero-description {
+    max-width: 620px;
+
+    color: var(--gray);
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    margin-bottom: 28px;
+}
+
+.hero-description strong {
+    color: white;
+}
+
+.hero-buttons {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 11px;
+
+    margin-bottom: 28px;
+}
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+
+    padding: 0 22px;
+
+    border: 1px solid var(--red);
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: .5px;
+
+    transition: .25s;
+}
+
+.btn-primary {
+    background: var(--red);
+
+    color: white;
+
+    box-shadow:
+        0 0 25px rgba(255,38,0,.15);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 30px rgba(255,38,0,.22);
+}
+
+.btn-secondary {
+    background: rgba(255,255,255,.015);
+
+    color: white;
+
+    border-color: #3b4246;
+}
+
+.btn-secondary:hover {
+    border-color: var(--red);
+
+    color: var(--red);
+}
+
+.hero-info {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+.info-box {
+    padding: 9px 12px;
+
+    background: rgba(255,255,255,.015);
+
+    border: 1px solid #272e32;
+
+    color: var(--gray);
+
+    font-size: 10px;
+
+    font-weight: 600;
+}
+
+.info-box strong {
+    color: white;
+}
+
+
+/* =========================================================
+   AUTO / HUD
+========================================================= */
+
+.car-stage {
+    position: relative;
+
+    min-height: 460px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.car-stage::before {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,38,0,.12),
+            rgba(255,38,0,.035) 40%,
+            transparent 70%
+        );
+
+    filter: blur(2px);
+}
+
+.hud-corner {
+    position: absolute;
+
+    width: 70px;
+    height: 70px;
+
+    opacity: .8;
+}
+
+.hud-corner::before,
+.hud-corner::after {
+    content: "";
+
+    position: absolute;
+
+    background: var(--red);
+}
+
+.hud-corner::before {
+    width: 100%;
+    height: 1px;
+}
+
+.hud-corner::after {
+    width: 1px;
+    height: 100%;
+}
+
+.hud-left {
+    left: 5%;
+    top: 8%;
+}
+
+.hud-right {
+    right: 5%;
+    bottom: 8%;
+
+    transform: rotate(180deg);
+}
+
+.hud-text {
+    position: absolute;
+
+    top: 12%;
+    right: 8%;
+
+    color: #687277;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+.hud-text span {
+    color: var(--red);
+}
+
+.car-svg {
+    width: min(650px, 100%);
+
+    position: relative;
+
+    z-index: 3;
+
+    filter:
+        drop-shadow(
+            0 20px 25px rgba(0,0,0,.8)
+        )
+        drop-shadow(
+            0 0 25px rgba(255,38,0,.14)
+        );
+
+    animation: carFloat 4s ease-in-out infinite;
+}
+
+@keyframes carFloat {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+
+}
+
+
+/* skaner */
+
+.scan-line {
+    position: absolute;
+
+    left: 7%;
+    right: 7%;
+
+    height: 2px;
+
+    top: 20%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--red),
+            white,
+            var(--red),
+            transparent
+        );
+
+    box-shadow:
+        0 0 14px var(--red),
+        0 0 30px rgba(255,38,0,.5);
+
+    opacity: .8;
+
+    z-index: 5;
+
+    animation: scan 4s ease-in-out infinite;
+}
+
+@keyframes scan {
+
+    0% {
+        top: 18%;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: .8;
+    }
+
+    50% {
+        top: 78%;
+        opacity: 1;
+    }
+
+    90% {
+        opacity: .7;
+    }
+
+    100% {
+        top: 18%;
+        opacity: 0;
+    }
+
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+section {
+    padding: 105px 0;
+
+    position: relative;
+}
+
+.section-header {
+    margin-bottom: 48px;
+}
+
+.section-label {
+    color: var(--red);
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+.section-header h2 {
+    font-family: var(--heading);
+
+    font-size: clamp(
+        30px,
+        5vw,
+        55px
+    );
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+}
+
+.section-header p {
+    max-width: 650px;
+
+    color: var(--gray);
+
+    margin-top: 17px;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   SECTION DIVIDER
+========================================================= */
+
+.section-divider {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    top: 0;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #252c30,
+            transparent
+        );
+}
+
+
+/* =========================================================
+   USŁUGI
+========================================================= */
+
+.services {
+    background: #07090b;
+}
+
+.services-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 13px;
+}
+
+.service-card {
+    min-height: 270px;
+
+    padding: 27px 23px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.025),
+            transparent 45%
         ),
         var(--panel);
 
-    border:1px solid var(--red);
+    border: 1px solid var(--border);
 
-    padding:50px;
+    transition: .3s;
+}
 
-    display:flex;
+.service-card::after {
+    content: "";
 
-    align-items:center;
+    position: absolute;
 
-    justify-content:space-between;
+    width: 100px;
+    height: 2px;
 
-    gap:30px;
+    left: 0;
+    bottom: 0;
+
+    background: var(--red);
+
+    transition: .3s;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #4a3430;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.35);
+}
+
+.service-card:hover::after {
+    width: 100%;
+}
+
+.service-number {
+    font-family: var(--heading);
+
+    color: var(--red);
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    margin-bottom: 45px;
+}
+
+.service-card h3 {
+    font-family: var(--heading);
+
+    font-size: 20px;
+
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: var(--gray);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   CENNIK
+========================================================= */
+
+.prices {
+    background:
+        linear-gradient(
+            180deg,
+            #090c0f,
+            #06080a
+        );
+}
+
+.prices-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 13px;
+}
+
+.price-card {
+    padding: 28px 22px;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.025),
+            transparent 40%
+        ),
+        var(--panel);
+
+    border: 1px solid var(--border);
+
+    transition: .3s;
+}
+
+.price-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #4a3430;
+}
+
+.price-card.featured {
+    border-color: var(--red);
+
+    box-shadow:
+        inset 0 0 40px rgba(255,38,0,.025),
+        0 0 30px rgba(255,38,0,.04);
+}
+
+.price-card.featured::before {
+    content: "NAJCZĘŚCIEJ WYBIERANY";
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    padding: 7px 10px;
+
+    background: var(--red);
+
+    color: white;
+
+    font-size: 7px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+.price-card h3 {
+    font-family: var(--heading);
+
+    font-size: 18px;
+}
+
+.old-price {
+    color: #5f686d;
+
+    text-decoration: line-through;
+
+    font-size: 13px;
+
+    margin-top: 16px;
+}
+
+.price {
+    font-family: var(--heading);
+
+    font-size: 34px;
+
+    font-weight: 900;
+
+    line-height: 1;
+
+    margin: 5px 0 10px;
+}
+
+.price span {
+    color: var(--gray);
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 500;
+}
+
+.first-visit {
+    color: var(--green);
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    margin-bottom: 20px;
+}
+
+.price-card ul {
+    list-style: none;
+}
+
+.price-card li {
+    padding: 7px 0;
+
+    color: var(--gray);
+
+    font-size: 11px;
+
+    border-bottom: 1px solid #20272b;
+}
+
+.price-card li::before {
+    content: "✓";
+
+    color: var(--red);
+
+    font-weight: 900;
+
+    margin-right: 7px;
+}
+
+.special-prices {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 13px;
+
+    margin-top: 20px;
+}
+
+.special-box {
+    padding: 23px;
+
+    background: var(--panel);
+
+    border: 1px solid var(--border);
+}
+
+.special-box h3 {
+    font-family: var(--heading);
+
+    font-size: 15px;
+
+    margin-bottom: 8px;
+}
+
+.special-box p {
+    color: var(--gray);
+
+    font-size: 12px;
+}
+
+.special-box strong {
+    color: var(--red);
+}
+
+
+/* =========================================================
+   DOJAZD
+========================================================= */
+
+.travel {
+    background: #07090b;
+}
+
+.travel-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+.travel-card {
+    padding: 35px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: var(--panel);
+
+    border: 1px solid var(--border);
+}
+
+.travel-card::before {
+    content: "KM";
+
+    position: absolute;
+
+    right: -10px;
+    bottom: -35px;
+
+    font-family: var(--heading);
+
+    font-size: 130px;
+
+    font-weight: 900;
+
+    color: rgba(255,255,255,.018);
+}
+
+.travel-card h3 {
+    font-family: var(--heading);
+
+    font-size: 18px;
+
+    margin-bottom: 13px;
+}
+
+.travel-big {
+    font-family: var(--heading);
+
+    color: var(--red);
+
+    font-size: 44px;
+
+    font-weight: 900;
+
+    margin-bottom: 8px;
+}
+
+.travel-card p {
+    color: var(--gray);
+
+    font-size: 13px;
+
+    max-width: 500px;
+}
+
+.travel-example {
+    margin-top: 22px;
+
+    padding: 15px;
+
+    border-left: 2px solid var(--red);
+
+    background: rgba(255,38,0,.035);
+
+    color: var(--gray);
+
+    font-size: 12px;
+}
+
+.travel-example strong {
+    color: white;
+}
+
+
+/* =========================================================
+   LOJALNOŚĆ
+========================================================= */
+
+.loyalty {
+    background:
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(255,38,0,.04),
+            transparent 40%
+        ),
+        #080a0c;
+}
+
+.loyalty-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+.loyalty-card {
+    padding: 38px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,38,0,.045),
+            transparent 50%
+        ),
+        var(--panel);
+
+    border: 1px solid var(--border);
+
+    transition: .3s;
+}
+
+.loyalty-card:hover {
+    transform: translateY(-6px);
+
+    border-color: var(--red);
+}
+
+.loyalty-card::after {
+    content: "";
+
+    position: absolute;
+
+    right: -80px;
+    top: -80px;
+
+    width: 180px;
+    height: 180px;
+
+    border: 1px solid rgba(255,38,0,.12);
+
+    border-radius: 50%;
+}
+
+.loyalty-card h3 {
+    font-family: var(--heading);
+
+    font-size: 18px;
+}
+
+.loyalty-number {
+    color: #252c30;
+
+    font-family: var(--heading);
+
+    font-size: 85px;
+
+    font-weight: 900;
+
+    line-height: .8;
+
+    margin: 25px 0 12px;
+}
+
+.discount {
+    color: var(--green);
+
+    font-family: var(--heading);
+
+    font-size: 34px;
+
+    font-weight: 900;
+}
+
+.loyalty-card p {
+    color: var(--gray);
+
+    font-size: 13px;
+
+    margin-top: 9px;
+}
+
+.loyalty-card strong {
+    color: white;
+}
+
+
+/* =========================================================
+   POLECENIA
+========================================================= */
+
+.referral {
+    background: #07090b;
+}
+
+.referral-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+.referral-card {
+    padding: 35px;
+
+    background: var(--panel);
+
+    border: 1px solid var(--border);
+
+    transition: .3s;
+}
+
+.referral-card:hover {
+    border-color: #4a3430;
+
+    transform: translateY(-5px);
+}
+
+.referral-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 22px;
+
+    border: 1px solid var(--red);
+
+    color: var(--red);
+
+    font-family: var(--heading);
+
+    font-size: 19px;
+
+    font-weight: 900;
+}
+
+.referral-card h3 {
+    font-family: var(--heading);
+
+    font-size: 20px;
+
+    margin-bottom: 12px;
+}
+
+.referral-card p {
+    color: var(--gray);
+
+    font-size: 13px;
+}
+
+.referral-highlight {
+    color: var(--red);
+
+    font-weight: 900;
+}
+
+.referral-steps {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 8px;
+
+    margin-top: 25px;
+}
+
+.referral-step {
+    padding: 16px 8px;
+
+    text-align: center;
+
+    border: 1px solid #293034;
+}
+
+.referral-step strong {
+    display: block;
+
+    color: var(--red);
+
+    font-family: var(--heading);
+
+    font-size: 24px;
+}
+
+.referral-step span {
+    display: block;
+
+    margin-top: 5px;
+
+    color: var(--gray);
+
+    font-size: 8px;
+
+    font-weight: 700;
+}
+
+.referral-note {
+    margin-top: 20px;
+
+    color: var(--green);
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: .5px;
+}
+
+
+/* =========================================================
+   PROMOCJA
+========================================================= */
+
+.promotion {
+    padding-top: 75px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #07090b,
+            #050608
+        );
+}
+
+.promotion-box {
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 48px;
+
+    border: 1px solid var(--red);
+
+    background:
+        linear-gradient(
+            120deg,
+            rgba(255,38,0,.1),
+            transparent 55%
+        ),
+        var(--panel);
+
+    box-shadow:
+        inset 0 0 70px rgba(255,38,0,.025);
+}
+
+.promotion-box::after {
+    content: "FIRST";
+
+    position: absolute;
+
+    right: -20px;
+    bottom: -70px;
+
+    color: rgba(255,255,255,.025);
+
+    font-family: var(--heading);
+
+    font-size: 150px;
+
+    font-weight: 900;
 }
 
 .promotion-box h2 {
-    font-family:var(--heading);
+    font-family: var(--heading);
 
-    font-size:clamp(
+    font-size: clamp(
         28px,
         4vw,
-        50px
+        48px
     );
 }
 
 .promotion-box p {
-    color:var(--gray);
+    margin-top: 9px;
 
-    margin-top:10px;
+    color: var(--gray);
+
+    font-size: 13px;
 }
 
 .promotion-discount {
-    color:var(--red);
+    position: relative;
+    z-index: 2;
 
-    font-family:var(--heading);
+    color: var(--red);
 
-    font-size:50px;
+    font-family: var(--heading);
 
-    font-weight:900;
+    font-size: 52px;
 
-    white-space:nowrap;
+    font-weight: 900;
+
+    text-shadow:
+        0 0 25px rgba(255,38,0,.2);
 }
 
-/* =========================
+
+/* =========================================================
    KONTAKT
-========================= */
+========================================================= */
 
 .contact {
-    background:var(--bg2);
+    background: #07090b;
 }
 
 .contact-grid {
-    display:grid;
+    display: grid;
 
-    grid-template-columns:
-        1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 
-    gap:20px;
+    gap: 15px;
 }
 
 .contact-card {
-    background:var(--panel);
+    padding: 35px;
 
-    border:1px solid #252d31;
+    background: var(--panel);
 
-    padding:35px;
+    border: 1px solid var(--border);
 }
 
 .contact-card h3 {
-    font-family:var(--heading);
+    font-family: var(--heading);
 
-    font-size:22px;
+    font-size: 21px;
 
-    margin-bottom:20px;
+    margin-bottom: 18px;
 }
 
 .contact-row {
-    display:flex;
+    display: flex;
 
-    align-items:center;
+    align-items: center;
 
-    gap:15px;
+    gap: 15px;
 
-    padding:13px 0;
+    padding: 12px 0;
 
-    border-bottom:1px solid #20272b;
+    border-bottom: 1px solid #20272b;
 }
 
 .contact-label {
-    color:var(--gray);
+    min-width: 100px;
 
-    font-size:11px;
+    color: var(--gray2);
+
+    font-size: 9px;
+
+    font-weight: 800;
 }
 
 .contact-value {
-    font-weight:700;
+    font-size: 13px;
 
-    font-size:14px;
+    font-weight: 700;
 }
 
 .phone {
-    color:var(--red);
+    color: var(--red);
 
-    font-family:var(--heading);
+    font-family: var(--heading);
 
-    font-size:25px;
+    font-size: 25px;
 }
 
 .socials {
-    display:grid;
+    display: grid;
 
-    grid-template-columns:
-        1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 
-    gap:10px;
+    gap: 9px;
 
-    margin-top:25px;
+    margin-top: 25px;
 }
 
 .social-link {
-    padding:13px;
+    padding: 14px;
 
-    border:1px solid #2b3338;
+    text-align: center;
 
-    text-align:center;
+    border: 1px solid #2a3236;
 
-    font-size:11px;
+    font-size: 10px;
 
-    font-weight:800;
+    font-weight: 900;
 
-    transition:.2s;
+    transition: .2s;
 }
 
 .social-link:hover {
-    border-color:var(--red);
+    border-color: var(--red);
 
-    color:var(--red);
+    color: var(--red);
 }
 
 .social-icon {
-    margin-right:7px;
+    margin-right: 6px;
 }
 
-/* =========================
+
+/* =========================================================
    FOOTER
-========================= */
+========================================================= */
 
 footer {
-    background:#030405;
+    padding: 35px 0;
 
-    border-top:1px solid #1d2428;
+    background: #030405;
 
-    padding:35px 0;
+    border-top: 1px solid #1e2529;
 }
 
 .footer-inner {
-    display:flex;
+    display: flex;
 
-    justify-content:space-between;
+    align-items: center;
+    justify-content: space-between;
 
-    align-items:center;
-
-    gap:20px;
+    gap: 20px;
 }
 
 .footer-copy {
-    color:#6f797e;
+    color: #60696e;
 
-    font-size:10px;
+    font-size: 9px;
 
-    letter-spacing:1px;
+    line-height: 1.7;
+
+    letter-spacing: .7px;
 }
 
 .footer-socials {
-    display:flex;
+    display: flex;
 
-    gap:15px;
+    flex-wrap: wrap;
 
-    font-size:11px;
+    gap: 14px;
 
-    font-weight:700;
+    font-size: 9px;
+
+    font-weight: 900;
 }
 
 .footer-socials a:hover {
-    color:var(--red);
+    color: var(--red);
 }
 
-/* =========================
-   MOBILE
-========================= */
 
-@media(max-width:1100px) {
+/* =========================================================
+   ANIMACJE
+========================================================= */
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(25px);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1050px) {
 
     .nav-links {
-        gap:12px;
-        font-size:10px;
-    }
+        gap: 11px;
 
-}
-
-@media(max-width:950px) {
-
-    .services-grid,
-    .prices-grid {
-        grid-template-columns:1fr 1fr;
+        font-size: 9px;
     }
 
     .hero-grid {
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
+
+        gap: 20px;
     }
 
-    .travel-grid,
-    .loyalty-grid,
-    .referral-grid,
-    .contact-grid {
-        grid-template-columns:1fr;
+    .car-stage {
+        min-height: 400px;
     }
 
-    .promotion-box {
-        flex-direction:column;
-
-        align-items:flex-start;
+    .services-grid,
+    .prices-grid {
+        grid-template-columns: 1fr 1fr;
     }
 
 }
 
-@media(max-width:750px) {
+
+@media(max-width:760px) {
 
     .nav-links {
-        display:none;
+        display: none;
 
-        position:absolute;
+        position: absolute;
 
-        top:78px;
+        left: 0;
+        right: 0;
 
-        left:0;
-        right:0;
+        top: 76px;
 
-        padding:20px;
+        padding: 15px;
 
-        flex-direction:column;
+        flex-direction: column;
 
-        align-items:stretch;
+        align-items: stretch;
 
-        background:var(--panel);
+        gap: 3px;
 
-        border-bottom:1px solid #30383d;
+        background: #080b0e;
+
+        border-bottom: 1px solid #272e32;
     }
 
     .nav-links.active {
-        display:flex;
+        display: flex;
     }
 
     .nav-links a {
-        padding:12px;
+        padding: 13px;
     }
 
     .menu-btn {
-        display:block;
+        display: block;
+    }
+
+    .hero {
+        padding-top: 110px;
     }
 
     .hero h1 {
-        letter-spacing:-2px;
+        letter-spacing: -2px;
+    }
+
+    .car-stage {
+        min-height: 300px;
     }
 
     .services-grid,
     .prices-grid,
-    .special-prices {
-        grid-template-columns:1fr;
+    .special-prices,
+    .travel-grid,
+    .loyalty-grid,
+    .referral-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
     }
 
     .referral-steps {
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .promotion-box {
+        padding: 32px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
     }
 
     .footer-inner {
-        flex-direction:column;
+        flex-direction: column;
 
-        align-items:flex-start;
-    }
-
-    .footer-socials {
-        flex-wrap:wrap;
+        align-items: flex-start;
     }
 
 }
 
+
 @media(max-width:500px) {
 
     section {
-        padding:75px 0;
-    }
-
-    .hero {
-        padding-top:110px;
+        padding: 75px 0;
     }
 
     .hero-description {
-        font-size:15px;
+        font-size: 14px;
     }
 
-    .promotion-box,
-    .travel-card,
-    .loyalty-card,
-    .contact-card,
-    .referral-card {
-        padding:25px;
+    .hero-info {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .info-box {
+        font-size: 9px;
+    }
+
+    .car-stage {
+        min-height: 250px;
+    }
+
+    .loyalty-number {
+        font-size: 70px;
     }
 
     .promotion-discount {
-        font-size:40px;
+        font-size: 42px;
+    }
+
+    .contact-row {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 4px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media(prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        scroll-behavior: auto !important;
+
+        transition-duration: .01ms !important;
     }
 
 }
@@ -1266,9 +1851,9 @@ footer {
 <body>
 
 
-<!-- =========================
+<!-- =======================================================
      NAV
-========================= -->
+======================================================= -->
 
 <nav>
 
@@ -1290,41 +1875,28 @@ footer {
 
         <div class="nav-links" id="navLinks">
 
-            <a href="#uslugi">
-                USŁUGI
-            </a>
+            <a href="#uslugi">USŁUGI</a>
 
-            <a href="#cennik">
-                CENNIK
-            </a>
+            <a href="#cennik">CENNIK</a>
 
-            <a href="#dojazd">
-                DOJAZD
-            </a>
+            <a href="#dojazd">DOJAZD</a>
 
-            <a href="#lojalnosc">
-                LOJALNOŚĆ
-            </a>
+            <a href="#lojalnosc">LOJALNOŚĆ</a>
 
             <a href="#polecenie">
                 POLEĆ ZNAJOMEMU
             </a>
 
-            <a href="#promocja">
-                PROMOCJA
-            </a>
+            <a href="#promocja">PROMOCJA</a>
 
-            <a href="#kontakt"
-               class="nav-phone">
+            <a href="#kontakt" class="nav-phone">
                 ZADZWOŃ
             </a>
 
         </div>
 
 
-        <button
-            class="menu-btn"
-            id="menuBtn">
+        <button class="menu-btn" id="menuBtn">
 
             <span></span>
             <span></span>
@@ -1337,35 +1909,36 @@ footer {
 </nav>
 
 
-<!-- =========================
+<!-- =======================================================
      HERO
-========================= -->
+======================================================= -->
 
 <section class="hero" id="start">
 
     <div class="container hero-grid">
 
 
-        <div>
+        <div class="hero-left reveal">
 
             <div class="badge">
-                ● MOBILNY DETAILING // GORZÓW WLKP.
+                ● MOBILE DETAILING // GORZÓW WLKP.
             </div>
 
 
             <h1>
-                MOBILNY<br>
-                <span>AUTO DETAILING.</span>
+                TWOJE AUTO.<br>
+                <span>NASZA ROBOTA.</span>
             </h1>
 
 
             <p class="hero-description">
 
-                Twój samochód nie musi jechać do myjni.
-                <strong>My przyjeżdżamy do niego.</strong>
+                Profesjonalny mobilny auto detailing.
+                Nie musisz jechać do myjni —
+                <strong>my przyjeżdżamy do Ciebie.</strong>
 
-                Profesjonalne czyszczenie i detailing
-                z dojazdem do klienta nawet do 100 km.
+                Obsługujemy Gorzów Wielkopolski
+                i okolice do 100 km.
 
             </p>
 
@@ -1385,7 +1958,7 @@ footer {
                     href="tel:575913355"
                     class="btn btn-secondary">
 
-                    575 913 355
+                    ☎ 575 913 355
 
                 </a>
 
@@ -1396,16 +1969,16 @@ footer {
 
                 <div class="info-box">
                     <strong>0 PLN</strong>
-                    Gorzów + okolice
+                    GORZÓW
                 </div>
 
                 <div class="info-box">
-                    <strong>2 PLN/km</strong>
-                    poza strefą
+                    <strong>2 PLN/KM</strong>
+                    POZA STREFĄ
                 </div>
 
                 <div class="info-box">
-                    DO <strong>100 KM</strong>
+                    ZASIĘG <strong>100 KM</strong>
                 </div>
 
             </div>
@@ -1413,125 +1986,383 @@ footer {
         </div>
 
 
-        <!-- TERMINAL -->
+        <!-- =================================================
+             AUTO HUD
+        ================================================= -->
 
-        <div class="terminal">
+        <div class="car-stage reveal">
 
-            <div class="terminal-top">
+            <div class="hud-corner hud-left"></div>
 
-                <div class="terminal-title">
-                    SZYBKIE MYCIE // STATUS
-                </div>
+            <div class="hud-corner hud-right"></div>
 
-                <div class="status">
-                    ● BRAK TERMINÓW
-                </div>
-
+            <div class="hud-text">
+                VEHICLE SCAN // <span>ONLINE</span>
             </div>
 
-
-            <div class="terminal-row">
-
-                <span>
-                    TRYB
-                </span>
-
-                <strong>
-                    MOBILNY
-                </strong>
-
-            </div>
+            <div class="scan-line"></div>
 
 
-            <div class="terminal-row">
+            <!-- SAMOCHÓD SVG -->
 
-                <span>
-                    BAZA
-                </span>
+            <svg
+                class="car-svg"
+                viewBox="0 0 900 430"
+                xmlns="http://www.w3.org/2000/svg">
 
-                <strong>
-                    GORZÓW WLKP.
-                </strong>
+                <defs>
 
-            </div>
+                    <linearGradient
+                        id="carPaint"
+                        x1="0"
+                        y1="0"
+                        x2="1"
+                        y2="1">
 
+                        <stop
+                            offset="0"
+                            stop-color="#343b3f"/>
 
-            <div class="terminal-row">
+                        <stop
+                            offset=".45"
+                            stop-color="#111619"/>
 
-                <span>
-                    DOJAZD W OKOLICY
-                </span>
+                        <stop
+                            offset="1"
+                            stop-color="#050607"/>
 
-                <strong>
-                    0 PLN
-                </strong>
-
-            </div>
-
-
-            <div class="terminal-row">
-
-                <span>
-                    DOJAZD POZA STREFĄ
-                </span>
-
-                <strong>
-                    2 PLN / KM
-                </strong>
-
-            </div>
+                    </linearGradient>
 
 
-            <div class="terminal-row">
+                    <linearGradient
+                        id="glass"
+                        x1="0"
+                        y1="0"
+                        x2="1"
+                        y2="1">
 
-                <span>
-                    ZASIĘG
-                </span>
+                        <stop
+                            offset="0"
+                            stop-color="#3d4a50"/>
 
-                <strong>
-                    DO 100 KM
-                </strong>
+                        <stop
+                            offset=".5"
+                            stop-color="#10181c"/>
 
-            </div>
+                        <stop
+                            offset="1"
+                            stop-color="#050708"/>
 
-
-            <div class="terminal-row">
-
-                <span>
-                    PONIEDZIAŁEK – SOBOTA
-                </span>
-
-                <strong>
-                    CENA STANDARDOWA
-                </strong>
-
-            </div>
+                    </linearGradient>
 
 
-            <div class="terminal-row">
+                    <filter id="glow">
 
-                <span>
-                    NIEDZIELA
-                </span>
+                        <feGaussianBlur
+                            stdDeviation="5"
+                            result="blur"/>
 
-                <strong>
-                    +20%
-                </strong>
+                        <feMerge>
 
-            </div>
+                            <feMergeNode
+                                in="blur"/>
+
+                            <feMergeNode
+                                in="SourceGraphic"/>
+
+                        </feMerge>
+
+                    </filter>
+
+                </defs>
 
 
-            <div class="terminal-row">
+                <!-- cień -->
 
-                <span>
-                    DNI ŚWIĄTECZNE
-                </span>
+                <ellipse
+                    cx="450"
+                    cy="350"
+                    rx="335"
+                    ry="28"
+                    fill="#000"
+                    opacity=".75"/>
 
-                <strong>
-                    +25%
-                </strong>
 
-            </div>
+                <!-- główna karoseria -->
+
+                <path
+                    d="
+                    M110 300
+                    C130 265 170 250 230 240
+                    L300 145
+                    C320 117 352 100 390 96
+                    L550 96
+                    C585 98 615 116 640 145
+                    L700 222
+                    C765 235 795 258 805 300
+                    L790 325
+                    L110 325
+                    Z
+                    "
+                    fill="url(#carPaint)"
+                    stroke="#555d61"
+                    stroke-width="4"/>
+
+
+                <!-- szyby -->
+
+                <path
+                    d="
+                    M320 143
+                    C337 120 360 110 392 108
+                    L445 108
+                    L445 205
+                    L280 205
+                    Z
+                    "
+                    fill="url(#glass)"
+                    stroke="#596368"
+                    stroke-width="3"/>
+
+
+                <path
+                    d="
+                    M460 108
+                    L548 108
+                    C574 111 594 125 611 147
+                    L655 205
+                    L460 205
+                    Z
+                    "
+                    fill="url(#glass)"
+                    stroke="#596368"
+                    stroke-width="3"/>
+
+
+                <!-- linia maski -->
+
+                <path
+                    d="M190 240 L285 230 L655 230 L720 245"
+                    fill="none"
+                    stroke="#737b7f"
+                    stroke-width="3"
+                    opacity=".55"/>
+
+
+                <!-- boczna linia -->
+
+                <path
+                    d="
+                    M120 275
+                    C280 255 570 255 785 278
+                    "
+                    fill="none"
+                    stroke="#9aa1a4"
+                    stroke-width="3"
+                    opacity=".35"/>
+
+
+                <!-- drzwi -->
+
+                <path
+                    d="M290 212 L285 290"
+                    stroke="#4d565a"
+                    stroke-width="3"/>
+
+                <path
+                    d="M460 210 L458 290"
+                    stroke="#4d565a"
+                    stroke-width="3"/>
+
+                <path
+                    d="M640 211 L665 290"
+                    stroke="#4d565a"
+                    stroke-width="3"/>
+
+
+                <!-- klamki -->
+
+                <rect
+                    x="370"
+                    y="237"
+                    width="45"
+                    height="4"
+                    rx="2"
+                    fill="#858d91"/>
+
+                <rect
+                    x="525"
+                    y="237"
+                    width="45"
+                    height="4"
+                    rx="2"
+                    fill="#858d91"/>
+
+
+                <!-- przedni reflektor -->
+
+                <path
+                    d="
+                    M685 252
+                    L756 263
+                    L779 280
+                    L716 278
+                    Z
+                    "
+                    fill="#fff"
+                    opacity=".9"
+                    filter="url(#glow)"/>
+
+                <path
+                    d="
+                    M690 254
+                    L754 264
+                    "
+                    stroke="#ff2600"
+                    stroke-width="5"
+                    filter="url(#glow)"/>
+
+
+                <!-- tylny -->
+
+                <path
+                    d="
+                    M122 258
+                    L185 248
+                    L202 269
+                    L128 281
+                    Z
+                    "
+                    fill="#ff2600"
+                    opacity=".85"
+                    filter="url(#glow)"/>
+
+
+                <!-- grill -->
+
+                <path
+                    d="
+                    M735 282
+                    L805 288
+                    L795 314
+                    L724 310
+                    Z
+                    "
+                    fill="#050607"
+                    stroke="#32393d"
+                    stroke-width="3"/>
+
+
+                <line
+                    x1="742"
+                    y1="292"
+                    x2="795"
+                    y2="297"
+                    stroke="#777f83"
+                    stroke-width="2"/>
+
+                <line
+                    x1="739"
+                    y1="301"
+                    x2="793"
+                    y2="306"
+                    stroke="#777f83"
+                    stroke-width="2"/>
+
+
+                <!-- koła -->
+
+                <g>
+
+                    <circle
+                        cx="235"
+                        cy="310"
+                        r="61"
+                        fill="#050607"
+                        stroke="#565e62"
+                        stroke-width="7"/>
+
+                    <circle
+                        cx="235"
+                        cy="310"
+                        r="38"
+                        fill="#111619"
+                        stroke="#737b7f"
+                        stroke-width="4"/>
+
+                    <circle
+                        cx="235"
+                        cy="310"
+                        r="9"
+                        fill="#ff2600"/>
+
+                </g>
+
+
+                <g>
+
+                    <circle
+                        cx="680"
+                        cy="310"
+                        r="61"
+                        fill="#050607"
+                        stroke="#565e62"
+                        stroke-width="7"/>
+
+                    <circle
+                        cx="680"
+                        cy="310"
+                        r="38"
+                        fill="#111619"
+                        stroke="#737b7f"
+                        stroke-width="4"/>
+
+                    <circle
+                        cx="680"
+                        cy="310"
+                        r="9"
+                        fill="#ff2600"/>
+
+                </g>
+
+
+                <!-- dolny splitter -->
+
+                <path
+                    d="
+                    M115 322
+                    L790 322
+                    L775 337
+                    L130 337
+                    Z
+                    "
+                    fill="#080a0c"
+                    stroke="#343b3f"
+                    stroke-width="2"/>
+
+
+                <!-- czerwone akcenty -->
+
+                <path
+                    d="
+                    M145 292
+                    L195 289
+                    "
+                    stroke="#ff2600"
+                    stroke-width="5"
+                    filter="url(#glow)"/>
+
+                <path
+                    d="
+                    M710 291
+                    L765 295
+                    "
+                    stroke="#ff2600"
+                    stroke-width="5"
+                    filter="url(#glow)"/>
+
+            </svg>
+
 
         </div>
 
@@ -1540,30 +2371,33 @@ footer {
 </section>
 
 
-<!-- =========================
+<!-- =======================================================
      USŁUGI
-========================= -->
+======================================================= -->
 
-<section id="uslugi">
+<section
+    class="services"
+    id="uslugi">
+
+    <div class="section-divider"></div>
 
     <div class="container">
 
 
-        <div class="section-header">
+        <div class="section-header reveal">
 
             <div class="section-label">
-                01 // USŁUGI
+                01 // GARAGE SERVICES
             </div>
 
             <h2>
-                DOBIERZ PAKIET<br>
-                DO SWOJEGO AUTA.
+                WYBIERZ POZIOM<br>
+                DETAILINGU.
             </h2>
 
             <p>
-                Od szybkiego odświeżenia samochodu
-                po kompleksowy detailing wnętrza
-                i nadwozia.
+                Od szybkiego odświeżenia po kompleksowe
+                przygotowanie samochodu.
             </p>
 
         </div>
@@ -1572,10 +2406,10 @@ footer {
         <div class="services-grid">
 
 
-            <div class="service-card">
+            <div class="service-card reveal">
 
                 <div class="service-number">
-                    01
+                    01 // START
                 </div>
 
                 <h3>
@@ -1583,18 +2417,18 @@ footer {
                 </h3>
 
                 <p>
-                    Podstawowe odświeżenie samochodu
-                    dla osób, które chcą szybko poprawić
-                    wygląd auta.
+                    Szybkie odświeżenie auta dla kierowców,
+                    którzy chcą przywrócić samochodowi
+                    świeży wygląd.
                 </p>
 
             </div>
 
 
-            <div class="service-card">
+            <div class="service-card reveal">
 
                 <div class="service-number">
-                    02
+                    02 // DAILY
                 </div>
 
                 <h3>
@@ -1603,16 +2437,16 @@ footer {
 
                 <p>
                     Dokładniejsze czyszczenie wnętrza
-                    oraz kompleksowe odświeżenie samochodu.
+                    i kompleksowe odświeżenie samochodu.
                 </p>
 
             </div>
 
 
-            <div class="service-card">
+            <div class="service-card reveal">
 
                 <div class="service-number">
-                    03
+                    03 // PRO
                 </div>
 
                 <h3>
@@ -1620,17 +2454,17 @@ footer {
                 </h3>
 
                 <p>
-                    Rozbudowane czyszczenie dla klientów,
-                    którzy oczekują wyraźnie lepszego efektu.
+                    Rozbudowany pakiet dla osób,
+                    które chcą mocno poprawić wygląd auta.
                 </p>
 
             </div>
 
 
-            <div class="service-card">
+            <div class="service-card reveal">
 
                 <div class="service-number">
-                    04
+                    04 // MAX
                 </div>
 
                 <h3>
@@ -1638,11 +2472,12 @@ footer {
                 </h3>
 
                 <p>
-                    Kompleksowy detailing samochodu
-                    z naciskiem na dokładność i efekt końcowy.
+                    Kompleksowy detailing wnętrza
+                    i nadwozia z maksymalnym efektem.
                 </p>
 
             </div>
+
 
         </div>
 
@@ -1651,32 +2486,33 @@ footer {
 </section>
 
 
-<!-- =========================
+<!-- =======================================================
      CENNIK
-========================= -->
+======================================================= -->
 
 <section
     class="prices"
     id="cennik">
 
+    <div class="section-divider"></div>
+
     <div class="container">
 
 
-        <div class="section-header">
+        <div class="section-header reveal">
 
             <div class="section-label">
-                02 // CENNIK
+                02 // PRICING
             </div>
 
             <h2>
-                PROSTE CENY.<br>
-                KONKRETNA USŁUGA.
+                CENNIK<br>
+                SZYBKIE MYCIE.
             </h2>
 
             <p>
                 Ceny podstawowe obowiązują od poniedziałku
-                do soboty. Dla pierwszych klientów
-                przygotowaliśmy specjalne ceny startowe.
+                do soboty.
             </p>
 
         </div>
@@ -1685,9 +2521,7 @@ footer {
         <div class="prices-grid">
 
 
-            <!-- BASIC -->
-
-            <div class="price-card">
+            <div class="price-card reveal">
 
                 <h3>
                     BASIC
@@ -1710,30 +2544,20 @@ footer {
 
                 <ul>
 
-                    <li>
-                        Podstawowe mycie
-                    </li>
+                    <li>Podstawowe mycie</li>
 
-                    <li>
-                        Odświeżenie auta
-                    </li>
+                    <li>Odświeżenie auta</li>
 
-                    <li>
-                        Czyszczenie podstawowe
-                    </li>
+                    <li>Czyszczenie podstawowe</li>
 
-                    <li>
-                        Szybkie odświeżenie wnętrza
-                    </li>
+                    <li>Szybkie odświeżenie wnętrza</li>
 
                 </ul>
 
             </div>
 
 
-            <!-- STANDARD -->
-
-            <div class="price-card">
+            <div class="price-card reveal">
 
                 <h3>
                     STANDARD
@@ -1756,30 +2580,20 @@ footer {
 
                 <ul>
 
-                    <li>
-                        Dokładniejsze mycie
-                    </li>
+                    <li>Dokładniejsze mycie</li>
 
-                    <li>
-                        Czyszczenie wnętrza
-                    </li>
+                    <li>Czyszczenie wnętrza</li>
 
-                    <li>
-                        Odświeżenie plastików
-                    </li>
+                    <li>Odświeżenie plastików</li>
 
-                    <li>
-                        Czyszczenie szyb
-                    </li>
+                    <li>Czyszczenie szyb</li>
 
                 </ul>
 
             </div>
 
 
-            <!-- PREMIUM -->
-
-            <div class="price-card featured">
+            <div class="price-card featured reveal">
 
                 <h3>
                     PREMIUM
@@ -1802,34 +2616,22 @@ footer {
 
                 <ul>
 
-                    <li>
-                        Kompleksowe mycie
-                    </li>
+                    <li>Kompleksowe mycie</li>
 
-                    <li>
-                        Dokładne czyszczenie wnętrza
-                    </li>
+                    <li>Dokładne czyszczenie wnętrza</li>
 
-                    <li>
-                        Czyszczenie plastików
-                    </li>
+                    <li>Czyszczenie plastików</li>
 
-                    <li>
-                        Czyszczenie szyb
-                    </li>
+                    <li>Czyszczenie szyb</li>
 
-                    <li>
-                        Dokładne odświeżenie
-                    </li>
+                    <li>Dokładne odświeżenie</li>
 
                 </ul>
 
             </div>
 
 
-            <!-- FULL DETAIL -->
-
-            <div class="price-card">
+            <div class="price-card reveal">
 
                 <h3>
                     FULL DETAIL
@@ -1852,39 +2654,28 @@ footer {
 
                 <ul>
 
-                    <li>
-                        Kompleksowy detailing
-                    </li>
+                    <li>Kompleksowy detailing</li>
 
-                    <li>
-                        Dokładne czyszczenie wnętrza
-                    </li>
+                    <li>Dokładne czyszczenie wnętrza</li>
 
-                    <li>
-                        Dokładne czyszczenie nadwozia
-                    </li>
+                    <li>Dokładne czyszczenie nadwozia</li>
 
-                    <li>
-                        Pełne odświeżenie samochodu
-                    </li>
+                    <li>Pełne odświeżenie samochodu</li>
 
-                    <li>
-                        Maksymalny efekt końcowy
-                    </li>
+                    <li>Maksymalny efekt końcowy</li>
 
                 </ul>
 
             </div>
 
+
         </div>
 
-
-        <!-- DOPŁATY -->
 
         <div class="special-prices">
 
 
-            <div class="special-box">
+            <div class="special-box reveal">
 
                 <h3>
                     ◷ NIEDZIELA
@@ -1900,7 +2691,7 @@ footer {
             </div>
 
 
-            <div class="special-box">
+            <div class="special-box reveal">
 
                 <h3>
                     ★ DNI ŚWIĄTECZNE
@@ -1915,6 +2706,7 @@ footer {
 
             </div>
 
+
         </div>
 
     </div>
@@ -1922,29 +2714,33 @@ footer {
 </section>
 
 
-<!-- =========================
+<!-- =======================================================
      DOJAZD
-========================= -->
+======================================================= -->
 
-<section id="dojazd">
+<section
+    class="travel"
+    id="dojazd">
+
+    <div class="section-divider"></div>
 
     <div class="container">
 
 
-        <div class="section-header">
+        <div class="section-header reveal">
 
             <div class="section-label">
-                03 // DOJAZD
+                03 // MOBILE UNIT
             </div>
 
             <h2>
-                MY PRZYJEŻDŻAMY<br>
-                DO CIEBIE.
+                DETAILING<br>
+                POD TWOIM DOMEM.
             </h2>
 
             <p>
-                Nie musisz tracić czasu na dojazd do myjni.
-                Przyjeżdżamy pod wskazany adres.
+                Ty zostajesz na miejscu.
+                My przyjeżdżamy z całym sprzętem.
             </p>
 
         </div>
@@ -1953,7 +2749,7 @@ footer {
         <div class="travel-grid">
 
 
-            <div class="travel-card">
+            <div class="travel-card reveal">
 
                 <h3>
                     GORZÓW + OKOLICE
@@ -1972,7 +2768,7 @@ footer {
             </div>
 
 
-            <div class="travel-card">
+            <div class="travel-card reveal">
 
                 <h3>
                     POZA STREFĄ
@@ -1984,28 +2780,24 @@ footer {
 
                 <p>
                     Poza bezpłatną strefą pobieramy
-                    opłatę za dojazd w wysokości
                     2 zł za kilometr.
                 </p>
 
                 <div class="travel-example">
 
-                    Opłata liczona jest
-                    <strong>w jedną stronę</strong>,
-                    od Gorzowa Wielkopolskiego
-                    do miejsca wykonania usługi.
+                    Liczymy odległość
+                    <strong>w jedną stronę</strong>
+                    od Gorzowa.
 
                     <br><br>
 
-                    Przykład:
-                    <strong>
-                        50 km od Gorzowa = 100 zł
-                    </strong>
-                    za dojazd.
+                    50 km od Gorzowa =
+                    <strong>100 zł za dojazd.</strong>
 
                 </div>
 
             </div>
+
 
         </div>
 
@@ -2014,31 +2806,33 @@ footer {
 </section>
 
 
-<!-- =========================
+<!-- =======================================================
      LOJALNOŚĆ
-========================= -->
+======================================================= -->
 
 <section
     class="loyalty"
     id="lojalnosc">
 
+    <div class="section-divider"></div>
+
     <div class="container">
 
 
-        <div class="section-header">
+        <div class="section-header reveal">
 
             <div class="section-label">
-                04 // LOJALNOŚĆ
+                04 // LOYALTY SYSTEM
             </div>
 
             <h2>
-                WRACASZ?<br>
-                PŁACISZ MNIEJ.
+                ZBIERAJ.<br>
+                ODBIERAJ RABAT.
             </h2>
 
             <p>
-                Zbieraj pieczątki za wizyty
-                i odbieraj rabaty na kolejne usługi.
+                Każda kolejna wizyta przybliża Cię
+                do większego rabatu.
             </p>
 
         </div>
@@ -2047,9 +2841,7 @@ footer {
         <div class="loyalty-grid">
 
 
-            <!-- 10 PIECZĄTEK -->
-
-            <div class="loyalty-card">
+            <div class="loyalty-card reveal">
 
                 <h3>
                     10 PIECZĄTEK
@@ -2064,20 +2856,16 @@ footer {
                 </div>
 
                 <p>
-                    Po zebraniu 10 pieczątek
-                    otrzymujesz
-                    <strong>
-                        -27% rabatu
-                    </strong>
-                    na kolejną usługę detailingową.
+                    Rabat na detailing
+                    od pakietu
+                    <strong>STANDARD</strong>
+                    wzwyż.
                 </p>
 
             </div>
 
 
-            <!-- 20 PIECZĄTEK -->
-
-            <div class="loyalty-card">
+            <div class="loyalty-card reveal">
 
                 <h3>
                     20 PIECZĄTEK
@@ -2092,15 +2880,14 @@ footer {
                 </div>
 
                 <p>
-                    Po zebraniu 20 pieczątek
-                    otrzymujesz
-                    <strong>
-                        -50% rabatu
-                    </strong>
-                    na kolejną usługę detailingową.
+                    Rabat na detailing
+                    od pakietu
+                    <strong>PREMIUM</strong>
+                    wzwyż.
                 </p>
 
             </div>
+
 
         </div>
 
@@ -2109,31 +2896,33 @@ footer {
 </section>
 
 
-<!-- =========================
+<!-- =======================================================
      POLEĆ ZNAJOMEMU
-========================= -->
+======================================================= -->
 
 <section
     class="referral"
     id="polecenie">
 
+    <div class="section-divider"></div>
+
     <div class="container">
 
 
-        <div class="section-header">
+        <div class="section-header reveal">
 
             <div class="section-label">
-                05 // POLECENIA
+                05 // REFERRAL SYSTEM
             </div>
 
             <h2>
-                POLEĆ NAS<br>
-                ZNAJOMEMU.
+                POLEĆ ZNAJOMEMU.<br>
+                ZAPŁAĆ MNIEJ.
             </h2>
 
             <p>
-                Poleć usługi Szybkie Mycie swoim znajomym
-                i odbierz rabat na swoje kolejne czyszczenie.
+                Poleć Szybkie Mycie swoim znajomym
+                i zbieraj kolejne rabaty.
             </p>
 
         </div>
@@ -2142,7 +2931,7 @@ footer {
         <div class="referral-grid">
 
 
-            <div class="referral-card">
+            <div class="referral-card reveal">
 
                 <div class="referral-icon">
                     %
@@ -2155,7 +2944,6 @@ footer {
 
                 <p>
 
-                    Poleć nasze usługi znajomym.
                     Po skutecznym poleceniu możesz otrzymać
                     od
                     <span class="referral-highlight">
@@ -2175,7 +2963,7 @@ footer {
                         </strong>
 
                         <span>
-                            1 POLECONA OSOBA
+                            1 OSOBA
                         </span>
 
                     </div>
@@ -2188,7 +2976,7 @@ footer {
                         </strong>
 
                         <span>
-                            2 POLECONE OSOBY
+                            2 OSOBY
                         </span>
 
                     </div>
@@ -2201,7 +2989,7 @@ footer {
                         </strong>
 
                         <span>
-                            3+ POLECONE OSOBY
+                            3+ OSOBY
                         </span>
 
                     </div>
@@ -2211,13 +2999,13 @@ footer {
 
 
                 <div class="referral-note">
-                    ★ POLECAJ // ZBIERAJ RABAT // PŁAĆ MNIEJ
+                    ★ POLECAJ // ZBIERAJ // OSZCZĘDZAJ
                 </div>
 
             </div>
 
 
-            <div class="referral-card">
+            <div class="referral-card reveal">
 
                 <div class="referral-icon">
                     SM
@@ -2240,7 +3028,7 @@ footer {
 
 
                 <div class="referral-note">
-                    RABAT: OD 10% DO 30%
+                    RABAT: 10% → 20% → 30%
                 </div>
 
             </div>
@@ -2253,9 +3041,9 @@ footer {
 </section>
 
 
-<!-- =========================
+<!-- =======================================================
      PROMOCJA
-========================= -->
+======================================================= -->
 
 <section
     class="promotion"
@@ -2264,8 +3052,7 @@ footer {
     <div class="container">
 
 
-        <div class="promotion-box">
-
+        <div class="promotion-box reveal">
 
             <div>
 
@@ -2274,13 +3061,10 @@ footer {
                 </h2>
 
                 <p>
-
                     Nowy klient =
                     specjalna cena startowa.
-
-                    Skorzystaj z promocji
-                    na wybrany pakiet.
-
+                    Wybierz pakiet i sprawdź,
+                    ile możesz zaoszczędzić.
                 </p>
 
             </div>
@@ -2290,7 +3074,6 @@ footer {
                 -24%
             </div>
 
-
         </div>
 
     </div>
@@ -2298,31 +3081,32 @@ footer {
 </section>
 
 
-<!-- =========================
+<!-- =======================================================
      KONTAKT
-========================= -->
+======================================================= -->
 
 <section
     class="contact"
     id="kontakt">
 
+    <div class="section-divider"></div>
+
     <div class="container">
 
 
-        <div class="section-header">
+        <div class="section-header reveal">
 
             <div class="section-label">
-                06 // KONTAKT
+                06 // CONTACT
             </div>
 
             <h2>
-                UMÓW SWÓJ<br>
-                TERMIN.
+                ODPAL KONTAKT.<br>
+                RESZTĄ ZAJMIEMY SIĘ MY.
             </h2>
 
             <p>
                 Zadzwoń lub napisz i ustal dogodny termin.
-                Przyjeżdżamy do Ciebie.
             </p>
 
         </div>
@@ -2331,9 +3115,7 @@ footer {
         <div class="contact-grid">
 
 
-            <!-- DANE -->
-
-            <div class="contact-card">
+            <div class="contact-card reveal">
 
                 <h3>
                     SZYBKIE MYCIE
@@ -2356,11 +3138,24 @@ footer {
                 <div class="contact-row">
 
                     <div class="contact-label">
-                        OBSZAR
+                        BAZA
                     </div>
 
                     <div class="contact-value">
-                        Gorzów Wielkopolski + 100 km
+                        Gorzów Wielkopolski
+                    </div>
+
+                </div>
+
+
+                <div class="contact-row">
+
+                    <div class="contact-label">
+                        ZASIĘG
+                    </div>
+
+                    <div class="contact-value">
+                        Do 100 km
                     </div>
 
                 </div>
@@ -2395,7 +3190,7 @@ footer {
                 <div class="contact-row">
 
                     <div class="contact-label">
-                        DNI ŚWIĄTECZNE
+                        ŚWIĘTA
                     </div>
 
                     <div class="contact-value">
@@ -2407,9 +3202,7 @@ footer {
             </div>
 
 
-            <!-- SOCIAL MEDIA -->
-
-            <div class="contact-card">
+            <div class="contact-card reveal">
 
                 <h3>
                     SOCIAL MEDIA
@@ -2417,8 +3210,9 @@ footer {
 
                 <p style="color:var(--gray);font-size:13px;">
 
-                    Obserwuj Szybkie Mycie
-                    i zobacz nasze realizacje.
+                    Tutaj wkleisz swoje profile
+                    na Instagramie, TikToku,
+                    Facebooku i WhatsApp.
 
                 </p>
 
@@ -2432,11 +3226,7 @@ footer {
                         rel="noopener"
                         class="social-link">
 
-                        <span class="social-icon">
-                            ◎
-                        </span>
-
-                        INSTAGRAM
+                        ◎ INSTAGRAM
 
                     </a>
 
@@ -2447,11 +3237,7 @@ footer {
                         rel="noopener"
                         class="social-link">
 
-                        <span class="social-icon">
-                            ♪
-                        </span>
-
-                        TIKTOK
+                        ♪ TIKTOK
 
                     </a>
 
@@ -2462,11 +3248,7 @@ footer {
                         rel="noopener"
                         class="social-link">
 
-                        <span class="social-icon">
-                            f
-                        </span>
-
-                        FACEBOOK
+                        f FACEBOOK
 
                     </a>
 
@@ -2477,11 +3259,7 @@ footer {
                         rel="noopener"
                         class="social-link">
 
-                        <span class="social-icon">
-                            ☎
-                        </span>
-
-                        WHATSAPP
+                        ☎ WHATSAPP
 
                     </a>
 
@@ -2490,6 +3268,7 @@ footer {
 
             </div>
 
+
         </div>
 
     </div>
@@ -2497,9 +3276,9 @@ footer {
 </section>
 
 
-<!-- =========================
+<!-- =======================================================
      FOOTER
-========================= -->
+======================================================= -->
 
 <footer>
 
@@ -2511,19 +3290,18 @@ footer {
             © 2026 SZYBKIE MYCIE //
             MOBILNY AUTO DETAILING //
             GORZÓW WIELKOPOLSKI //
-            PONIEDZIAŁEK – SOBOTA //
             DO 100 KM
 
-            <br><br>
+            <br>
 
+            PONIEDZIAŁEK – SOBOTA //
             NIEDZIELA +20% //
-            DNI ŚWIĄTECZNE +25%
+            ŚWIĘTA +25%
 
         </div>
 
 
         <div class="footer-socials">
-
 
             <a
                 href="TWOJ LINK INSTAGRAM"
@@ -2534,7 +3312,6 @@ footer {
 
             </a>
 
-
             <a
                 href="TWOJ LINK TIKTOK"
                 target="_blank"
@@ -2543,7 +3320,6 @@ footer {
                 TIKTOK
 
             </a>
-
 
             <a
                 href="TWOJ LINK FACEBOOK"
@@ -2554,7 +3330,6 @@ footer {
 
             </a>
 
-
             <a
                 href="TWOJ LINK WHATSAPP"
                 target="_blank"
@@ -2564,7 +3339,6 @@ footer {
 
             </a>
 
-
         </div>
 
     </div>
@@ -2572,15 +3346,15 @@ footer {
 </footer>
 
 
-<!-- =========================
+<!-- =======================================================
      JAVASCRIPT
-========================= -->
+======================================================= -->
 
 <script>
 
-/* =========================
-   MENU MOBILNE
-========================= */
+/* =========================================================
+   MENU
+========================================================= */
 
 const menuBtn =
     document.getElementById("menuBtn");
@@ -2591,7 +3365,7 @@ const navLinks =
 
 menuBtn.addEventListener(
     "click",
-    function() {
+    () => {
 
         navLinks.classList.toggle("active");
 
@@ -2599,17 +3373,15 @@ menuBtn.addEventListener(
 );
 
 
-/* =========================
-   ZAMKNIĘCIE MENU
-========================= */
+/* zamykanie menu */
 
 document
     .querySelectorAll(".nav-links a")
-    .forEach(function(link) {
+    .forEach(link => {
 
         link.addEventListener(
             "click",
-            function() {
+            () => {
 
                 navLinks.classList.remove(
                     "active"
@@ -2621,58 +3393,181 @@ document
     });
 
 
-/* =========================
-   ANIMACJE
-========================= */
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
 
-const observer =
+const revealObserver =
     new IntersectionObserver(
-        function(entries) {
+        entries => {
 
-            entries.forEach(
-                function(entry) {
+            entries.forEach(entry => {
 
-                    if (
-                        entry.isIntersecting
-                    ) {
+                if (
+                    entry.isIntersecting
+                ) {
 
-                        entry.target.style.opacity =
-                            "1";
-
-                        entry.target.style.transform =
-                            "translateY(0)";
-
-                    }
+                    entry.target.classList.add(
+                        "visible"
+                    );
 
                 }
-            );
+
+            });
 
         },
         {
-            threshold:0.12
+            threshold: .12
         }
     );
 
 
 document
-    .querySelectorAll(
-        ".service-card, .price-card, .travel-card, .loyalty-card, .referral-card, .contact-card"
-    )
-    .forEach(
-        function(element) {
+    .querySelectorAll(".reveal")
+    .forEach(element => {
 
-            element.style.opacity = "0";
+        revealObserver.observe(
+            element
+        );
 
-            element.style.transform =
-                "translateY(20px)";
+    });
 
-            element.style.transition =
-                "opacity .6s ease, transform .6s ease";
 
-            observer.observe(element);
+/* =========================================================
+   EFEKT SKANERA AUTA
+========================================================= */
 
-        }
-    );
+const carStage =
+    document.querySelector(".car-stage");
+
+const scanLine =
+    document.querySelector(".scan-line");
+
+
+carStage.addEventListener(
+    "mousemove",
+    event => {
+
+        const rect =
+            carStage.getBoundingClientRect();
+
+        const x =
+            event.clientX - rect.left;
+
+        const y =
+            event.clientY - rect.top;
+
+        const moveX =
+            (x / rect.width - .5) * 12;
+
+        const moveY =
+            (y / rect.height - .5) * 8;
+
+
+        const car =
+            document.querySelector(".car-svg");
+
+
+        car.style.transform =
+            `translate(${moveX}px, ${moveY}px)`;
+
+
+        scanLine.style.opacity = ".9";
+
+    }
+);
+
+
+carStage.addEventListener(
+    "mouseleave",
+    () => {
+
+        const car =
+            document.querySelector(".car-svg");
+
+        car.style.transform = "";
+
+        scanLine.style.opacity = "";
+
+    }
+);
+
+
+/* =========================================================
+   AKTYWNA SEKCJA W MENU
+========================================================= */
+
+const sections =
+    document.querySelectorAll("section[id]");
+
+const links =
+    document.querySelectorAll(".nav-links a");
+
+
+window.addEventListener(
+    "scroll",
+    () => {
+
+        let current = "";
+
+        sections.forEach(section => {
+
+            const sectionTop =
+                section.offsetTop - 150;
+
+            if (
+                window.scrollY >= sectionTop
+            ) {
+
+                current =
+                    section.getAttribute("id");
+
+            }
+
+        });
+
+
+        links.forEach(link => {
+
+            link.style.color = "";
+
+            if (
+                link.getAttribute("href")
+                === "#" + current
+            ) {
+
+                link.style.color =
+                    "#ff2600";
+
+            }
+
+        });
+
+    }
+);
+
+
+/* =========================================================
+   TERMINAL STATUS — PULSOWANIE
+========================================================= */
+
+const status =
+    document.querySelector(".status");
+
+
+setInterval(
+    () => {
+
+        if (!status) return;
+
+        status.style.opacity =
+            status.style.opacity === "0.45"
+                ? "1"
+                : "0.45";
+
+    },
+    900
+);
 
 </script>
 
